@@ -3,37 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a66f0516-31b5-4f76-9e3c-14df32cc8ef4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/.idea/fire_sale.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/fire_sale/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/fire_sale/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/fire_sale/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/fire_sale/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/fire_sale/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/firesale/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/login/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/static/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/templates/firesale/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/templates/login/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire_sale/templates/navigation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +22,13 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FireSale" type="Python.DjangoServer" factoryName="Django server">
       <module name="FireSale" />
@@ -77,7 +46,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -93,7 +62,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651483560394</updated>
-      <workItem from="1651483581487" duration="2958000" />
+      <workItem from="1651483581487" duration="3811000" />
+      <workItem from="1651487462176" duration="91000" />
     </task>
     <servers />
   </component>
