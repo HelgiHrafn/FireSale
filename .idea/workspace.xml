@@ -33,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/fire_sale/templates/firesale/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fire_sale/templates/login/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fire_sale/templates/navigation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Helgi\Desktop\Verklegt 2\FireSale\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -92,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651483560394</updated>
-      <workItem from="1651483581487" duration="1732000" />
+      <workItem from="1651483581487" duration="2958000" />
     </task>
     <servers />
   </component>
