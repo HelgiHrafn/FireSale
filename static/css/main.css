@@ -2,4 +2,9 @@
     background-color: darkorange;
     border: solid 2px rgba(155, 155, 155, .5);
     margin: 0;
+    border-radius: 15px;
+}
+
+.searchbar {
+    margin: 50%;
 }
