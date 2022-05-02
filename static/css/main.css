@@ -1,10 +1,10 @@
 .firesale {
-    background-color: darkorange;
+    background-color: #F9A26C;
     border: solid 2px rgba(155, 155, 155, .5);
     margin: 0;
     border-radius: 15px;
 }
 
 .searchbar {
-    margin: 50%;
+    margin-left: 50%;
 }
