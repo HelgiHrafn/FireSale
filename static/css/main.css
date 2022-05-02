@@ -1,4 +1,5 @@
 .firesale {
-    background-color: orange;
+    background-color: darkorange;
     border: solid 2px rgba(155, 155, 155, .5);
+    margin: 0;
 }
