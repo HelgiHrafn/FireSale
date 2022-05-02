@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66f0516-31b5-4f76-9e3c-14df32cc8ef4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/register/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navigation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +33,25 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Helgi/Desktop/Verklegt 2/djangoProject"
+    "last_opened_file_path": "C:/Users/User/Documents/Verklegt2/FireSale"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\Verklegt2\FireSale\templates" />
       <recent name="C:\Users\Helgi\Desktop\Verklegt 2\FireSale" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="FireSale" type="Python.DjangoServer" factoryName="Django server">
-      <module name="FireSale" />
+      <module name="fire_sale" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="fire_sale.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Helgi\Desktop\Verklegt 2\djangoProject\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\User\AppData\Local\Programs\Python\Python39\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -75,6 +80,7 @@
       <workItem from="1651487462176" duration="511000" />
       <workItem from="1651487990678" duration="340000" />
       <workItem from="1651491216976" duration="938000" />
+      <workItem from="1651498966560" duration="1413000" />
     </task>
     <servers />
   </component>
