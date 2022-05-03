@@ -1,0 +1,11 @@
+INSERT INTO login_user(user_name, first_name, last_name, email, password) VALUES ('joejoe', 'Joe', 'Johnson', 'jojo@firesale.com', '12345');
+INSERT INTO login_user(user_name, first_name, last_name, email, password) VALUES ('bob', 'Bob', 'Berry', 'berries@firesale.com', '12345');
+INSERT INTO login_user(user_name, first_name, last_name, email, password) VALUES ('jill', 'Jill', 'July', 'jull@firesale.com', '12345');
+INSERT INTO login_user(user_name, first_name, last_name, email, password) VALUES ('frikkidor', 'Frikki', 'Dór', 'brother1@firesale.com', '12345');
+INSERT INTO login_user(user_name, first_name, last_name, email, password) VALUES ('jonjonsson', 'Jón', 'Jónsson', 'brother2@firesale.com', '12345');
+
+INSERT INTO login_userprofile(user_profile_id, profile_image, profile_rating ) VALUES( 1, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ASample_User_Icon.png&psig=AOvVaw2cAayF3jVCN6iQ2uTacLVm&ust=1651661233541000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjTg9uTw_cCFQAAAAAdAAAAABAV', 5);
+INSERT INTO login_userprofile(user_profile_id, profile_image, profile_rating ) VALUES( 2, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ASample_User_Icon.png&psig=AOvVaw2cAayF3jVCN6iQ2uTacLVm&ust=1651661233541000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjTg9uTw_cCFQAAAAAdAAAAABAV', 5);
+INSERT INTO login_userprofile(user_profile_id, profile_image, profile_rating ) VALUES( 3, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ASample_User_Icon.png&psig=AOvVaw2cAayF3jVCN6iQ2uTacLVm&ust=1651661233541000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjTg9uTw_cCFQAAAAAdAAAAABAV', 5);
+INSERT INTO login_userprofile(user_profile_id, profile_image, profile_rating ) VALUES( 4, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ASample_User_Icon.png&psig=AOvVaw2cAayF3jVCN6iQ2uTacLVm&ust=1651661233541000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjTg9uTw_cCFQAAAAAdAAAAABAV', 5);
+INSERT INTO login_userprofile(user_profile_id, profile_image, profile_rating ) VALUES( 5, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ASample_User_Icon.png&psig=AOvVaw2cAayF3jVCN6iQ2uTacLVm&ust=1651661233541000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjTg9uTw_cCFQAAAAAdAAAAABAV', 5);
