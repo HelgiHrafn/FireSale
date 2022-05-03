@@ -2,16 +2,19 @@
 {% block content %}
     <h2>Welcome to the login!</h2>
 <div id="login_box">
-    <div class="register_image">
-        <img id="register_image" src="/static/images/logo_temp.png" alt="placeholder image">
-    </div>
-    <div class="input-box">
+
+    <img id="login_img" src="/static/images/logo_temp.png" alt="placeholder image">
+
+    <div class="login-input-box">
         <label for="user_name">Notendanafn</label>
         <input id="user_name" class="form-control" >
     </div>
-    <div class="input-box">
+    <div class="login-input-box">
         <label for="password">Lykilorð</label>
         <input id="password" class="form-control" >
+    </div>
+    <div class="confirm_button">
+
     </div>
 </div>
 {% endblock %}
