@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from firesale.models import Item
+from firesale.models import Condition
 
 sell_items = [
     {'name': 'Jordan skór', 'price': 15000, 'highestbid': 500},
@@ -16,5 +18,6 @@ sell_items = [
 
 # Create your views here.
 def index(request):
-    return render(request, 'firesale/index.html', context={ 'sell_items': sell_items })
+    context = {'items': Item.objects.all().order_by('item_name')}
+    return render(request, 'firesale/index.html', context)
 
