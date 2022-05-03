@@ -7,11 +7,6 @@
         <img class="button-image" src="/static/images/jordan_shoe.png" alt="placeholder image">
         <p>Verð: {{ item.price }} kr.</p>
         <p>Hæsta boð: {{ item.highestbid }} kr.</p>
-        {% if item.price > 13000 %}
-            <p>Dýrt</p>
-        {% else %}
-            <p>Ódýrt</p>
-        {% endif %}
         </button>
 
     {% endfor %}
