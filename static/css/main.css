@@ -14,7 +14,6 @@ body{
     max-width: 30%;
     margin: auto;
     border-radius: 5px;
-    height: 350px;
     flex-wrap: wrap-reverse;
 }
 #login_img{
@@ -30,11 +29,19 @@ body{
     margin-right: auto;
 }
 .login_button{
-    margin: auto;
     display: block;
+    max-width: 95%;
+    margin: 5px;
 }
 .confirm_button{
     background-color: #325D79;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px;
+    border-width: 0;
+    justify-content: flex-end;
 }
 *{
     font-family: Helvetica, sans-serif;
