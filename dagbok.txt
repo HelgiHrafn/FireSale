@@ -1,0 +1,18 @@
+-------------- Coding Dagbók - Hópur 11 --------------
+
+Vika 2:
+        2/5:
+            Git Repo sett upp
+            Settum upp Django structure í takt við Candy Queen
+            Venv uppsetningar og run configuration lagað hjá öllum í Pycharm
+
+        3/5:
+            Grunnútlit á helstu aðalsíðum sett upp
+                -Frontpage
+                -Navbar
+                -Register
+                -Login
+            Google Cloud reikningur stofnaður
+            Fyrstu skref tekin í database vinnu
+
+        4/5:
