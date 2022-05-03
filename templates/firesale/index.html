@@ -1,9 +1,6 @@
 {%  extends 'base.html' %}
 {% block content %}
-    <div class="firesale">
-        <h2>Welcome to the firesale</h2>
-    </div>
-        <input id="searchbar"class="form-control" placeholder="Leit" type="text">
+    <input id="searchbar" class="form-control" placeholder="Leit" type="text">
     {% for item in sell_items %}
         <button class="button-recommended">
         <h4>{{ item.name }}</h4>

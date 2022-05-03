@@ -1,9 +1,14 @@
 body{
     background-color: #EFEEEE;
+    font-family: Calibri, serif;
 }
 img{
     max-width: 100%;
     max-height: 100%;
+}
+#searchbar{
+    margin-top: 40px;
+    border-radius: 10px;
 }
 .page_title{
     color: #F26627;
@@ -13,7 +18,7 @@ img{
     padding: 15px;
     max-width: 40%;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 #top_items_register{
     display: flex;
@@ -45,7 +50,7 @@ img{
     padding: 15px;
     max-width: 30%;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     flex-wrap: wrap-reverse;
 }
 #login_img{
@@ -71,9 +76,6 @@ img{
     padding: 5px;
     border-width: 0;
 }
-*{
-    font-family: Helvetica, sans-serif;
-}
 .input-box{
     width: 100%;
 }
@@ -81,6 +83,7 @@ img{
 .form-control{
     background-color: #E5E5E5;
     border: #A6A6A6;
+    border-radius: 10px;
 }
 #register_image{
     border-radius: 50%;
