@@ -23,35 +23,31 @@ body{
     max-width: 70%;
     max-height: 70%;
 }
-.login-input-box{
+.login-button-box{
     max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
-.login_button{
-    display: block;
-    max-width: 95%;
-    margin: 5px;
+#login_button{
+    display: flex;
 }
 .confirm_button{
     background-color: #325D79;
     color: white;
     border-radius: 10px;
     font-size: 16px;
-    display: inline-block;
     padding: 5px;
     border-width: 0;
-    justify-content: flex-end;
 }
 *{
     font-family: Helvetica, sans-serif;
 }
 .input-box{
-    flex-wrap: wrap;
     max-width: 45%;
 }
 .input_boxes{
-    flex-wrap: wrap;
+
 }
 .form-control{
     background-color: #E5E5E5;

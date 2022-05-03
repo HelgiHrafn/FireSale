@@ -1,6 +1,6 @@
 {%  extends 'base.html' %}
 {% block content %}
-    <h2>Welcome to the login!</h2>
+    <h2>Innskráning</h2>
 <div id="login_box">
 
     <img id="login_img" src="/static/images/logo_temp.png" alt="placeholder image">
@@ -11,10 +11,10 @@
     </div>
     <div class="login-input-box">
         <label for="password">Lykilorð</label>
-        <input id="password" class="form-control" >
+        <input type="password" id="password" class="form-control" >
     </div>
-    <div class="login_button">
-        <button class="confirm_button">Skrá inn</button>
+    <div class="login-button-box">
+        <button id="login_button" class="confirm_button">Skrá inn</button>
     </div>
 </div>
 {% endblock %}
