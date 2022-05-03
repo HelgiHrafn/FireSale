@@ -9,9 +9,12 @@ Vika 2:
         3/5:
             Grunnútlit á helstu aðalsíðum sett upp
                 -Frontpage
-                -Navbar
+                -Navbar_logged_out
+                -Navbar_logged_in
                 -Register
                 -Login
+                -Profile
+                -Post Sale
             Google Cloud reikningur stofnaður
             Fyrstu skref tekin í database vinnu
 
