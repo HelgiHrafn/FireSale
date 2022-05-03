@@ -29,6 +29,13 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+.login_button{
+    margin: auto;
+    display: block;
+}
+.confirm_button{
+    background-color: #325D79;
+}
 *{
     font-family: Helvetica, sans-serif;
 }
