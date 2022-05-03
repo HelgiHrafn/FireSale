@@ -83,6 +83,7 @@ img{
 .form-control{
     background-color: #E5E5E5;
     border: #A6A6A6;
+    border-radius: 10px;
 }
 #register_image{
     border-radius: 50%;
