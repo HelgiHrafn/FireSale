@@ -5,6 +5,14 @@
     margin: auto;
     border-radius: 5px;
 }
+#login_box{
+    background-color: lightgray;
+    padding: 10px;
+    max-width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    height: 50%;
+}
 *{
     font-family: Helvetica, sans-serif;
 }
@@ -14,6 +22,10 @@
 }
 .input_boxes{
     flex-wrap: wrap;
+}
+.form-control{
+    color: #E5E5E5;
+    border: #A6A6A6;
 }
 #register_image{
     width: 20%;
