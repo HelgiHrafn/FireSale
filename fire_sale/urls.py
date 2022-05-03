@@ -22,6 +22,6 @@ urlpatterns = [
     path('firesale/', include('firesale.urls')),
     path('login/', include('login.urls')),
     path('register/', include('register.urls')),
-    path('my_sales/', include('my_sales.urls'))
-
+    path('my_sales/', include('my_sales.urls')),
+    path('my_offers/', include('my_offers.urls'))
 ]
