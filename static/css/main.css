@@ -5,15 +5,16 @@
     margin: auto;
     border-radius: 5px;
 }
-.input-box{
-    border: lightgray;
-    max-width: 40%;
-    flex-wrap: nowrap;
-}
 *{
     font-family: Helvetica, sans-serif;
 }
-
+.input-box{
+    flex-wrap: wrap;
+    max-width: 45%;
+}
+.input_boxes{
+    flex-wrap: wrap;
+}
 #register_image{
     width: 20%;
     height: 20%;
