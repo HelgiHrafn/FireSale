@@ -13,3 +13,9 @@
 *{
     font-family: Helvetica, sans-serif;
 }
+
+.register_image{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
