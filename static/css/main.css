@@ -6,6 +6,31 @@ img{
     max-width: 100%;
     max-height: 100%;
 }
+.offer_item{
+    width: 250px;
+    height: 350px;
+    background-color: #98D7D1;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.is_accepted{
+    width: 45%;
+    background-color: mediumseagreen;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#go_to_payment{
+    width: 35%;
+    justify-content: flex-end;
+}
+#offerprice{
+    width: 100%;
+}
 #searchbar{
     margin-top: 40px;
     border-radius: 10px;
