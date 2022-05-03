@@ -118,8 +118,6 @@ img{
 .button-recommended {
     background-color: #98D7D1;
     display: inline-block;
-    width: 16%;
-    height: 0%;
     margin: 20px;
     border: none;
     filter: drop-shadow(-3px 2px 1px rgba(0, 0, 0, 0.25));
@@ -138,7 +136,7 @@ img{
     border-radius: 1%;
 }
 .navbar-logo {
-      width: 30%;
+    width: 30%;
     height: 30%;
     border-radius: 50%;
     object-fit: cover;
@@ -183,6 +181,7 @@ img{
 
 }
 
+<<<<<<< Updated upstream
 #navbar_post_sale_button {
  padding-left: 20px;
     text-align: center;
@@ -191,3 +190,16 @@ img{
 .navbar-header {
     width:
 }
+=======
+span {
+    float: left;
+    clear: left;
+    padding-left: 20px;
+}
+
+.button-sell-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+>>>>>>> Stashed changes

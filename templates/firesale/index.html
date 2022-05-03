@@ -1,8 +1,10 @@
 {%  extends 'base.html' %}
 {% block content %}
     <input id="searchbar" class="form-control" placeholder="Leit" type="text">
+    <div class="button-sell-items">
     {% for item in items %}
         {% include 'firesale/single_item.html' with item=item  %}
     {% endfor %}
+    </div>
 {% endblock %}
 
