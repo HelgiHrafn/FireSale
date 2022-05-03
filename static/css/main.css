@@ -62,14 +62,14 @@ body{
 }
 
 .button-recommended {
-  background-color: #98D7D1;
-  width: 15%;
-  height: 15%;
-  padding: 20px;
-  margin: 20px;
-
-  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.25));
-  border-radius: 15px;
+    background-color: #98D7D1;
+    display: inline-block;
+    width: 16%;
+    height: 0%;
+    margin: 20px;
+    border: none;
+    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
 
 }
 
