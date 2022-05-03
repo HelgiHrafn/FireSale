@@ -5,13 +5,15 @@
     </div>
         <input id="searchbar"class="form-control" placeholder="Leit" type="text">
     {% for item in sell_items %}
+        <button class="recommended_item">
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.price }}ISK</p>
         {% if item.price > 13000 %}
             <p>Dýrt</p>
         {% else %}
             <p>Ódýrt</p>
         {% endif %}
-        <h4>{{ item.name }}</h4>
-        <p>{{ item.price }}ISK</p>
+        </button>
 
     {% endfor %}
 {% endblock %}
