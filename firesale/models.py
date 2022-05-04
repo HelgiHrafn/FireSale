@@ -1,5 +1,6 @@
 from django.db import models
 from login.models import User
+
 # Here we probably have models for Items that are available for sale
 
 
@@ -20,3 +21,5 @@ class Item(models.Model):
 
     def __str__(self):
         return self.item_name
+
+
