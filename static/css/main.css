@@ -196,6 +196,27 @@ img{
     text-align: center;
 }
 
+.post_sale_container {
+    background-color: blueviolet;
+    padding: 15px;
+    max-width: 30%;
+    margin: auto;
+    border-radius: 5px;
+    flex-wrap: wrap-reverse;
+}
+
+#post_sale_img {
+    display:inline-block;
+}
+
+.post_sale_left_side {
+
+}
+
+.post_sale_right_side {
+    
+}
+
 /* ALL ITEMS CSS FROM DB BEGIN HERE */
 .item-sell-name, .item-sell-price {
     float: left;
