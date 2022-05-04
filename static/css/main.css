@@ -198,24 +198,30 @@ img{
 }
 
 .post_sale_container {
-    background-color: blueviolet;
-    padding: 15px;
-    max-width: 30%;
-    margin: auto;
-    border-radius: 5px;
-    flex-wrap: wrap-reverse;
-}
-
-#post_sale_img {
-    display:inline-block;
+    background-color: darkgrey;
+    display:flex;
+    border: 2px solid;
 }
 
 .post_sale_left_side {
+    border: 2px solid;
+    order: 1;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
 
 }
 
 .post_sale_right_side {
-    
+    border: 2px solid;
+    order: 2;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
+}
+
+#post_sale_img {
+    display:inline-block;
 }
 
 /* ALL ITEMS CSS FROM DB BEGIN HERE */
