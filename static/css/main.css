@@ -41,7 +41,7 @@ img{
 
 }
 .searchbar-container{
-    margin: 40px auto 20px;
+    margin: 140px auto 20px;
     width: 96%;
     display: flex;
 }
@@ -50,6 +50,7 @@ img{
 }
 .page_title{
     color: #F26627;
+    margin-top: 140px;
 }
 #register_input{
     background-color: white;
@@ -138,6 +139,9 @@ img{
 .navbar-full {
     background-color: #F9A26C;
     border-radius: 1%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 .navbar-logo {
     width: 30%;
@@ -199,6 +203,7 @@ img{
     align-self: flex-start;
     font-size: 18px;
     padding-bottom: 5px;
+    color: #325D79;
 }
 
 .button-sell-all-items {
