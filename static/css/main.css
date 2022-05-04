@@ -172,18 +172,17 @@ img{
 
 }
 
-
 #navbar_post_sale_button {
  padding-left: 20px;
     text-align: center;
 }
 
-span {
+/* ALL ITEMS CSS FROM DB BEGIN HERE */
+.item-sell-name, .item-sell-price {
     float: left;
     clear: left;
     padding-left: 20px;
 }
-
 
 .button-sell-all-items {
   background-color: darkslategrey;
@@ -200,18 +199,6 @@ span {
     border-radius: 15px;
 }
 
-.button-sell-all-items2 {
-    display: flex;
-    align-items: flex-start;
-    /* Flex has to be wrap since that creates multiple lines*/
-    flex-wrap: wrap;
-    height: 200px;
-}
-
-.button-single-item2 {
-    width: 20%;
-}
-
 .item-sell-img {
     width: 100%;
 }
@@ -219,3 +206,4 @@ span {
 .each.item {
     width: 30%;
 }
+/* ALL ITEMS CSS FROM DB END HERE */
