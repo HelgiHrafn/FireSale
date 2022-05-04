@@ -1,4 +1,9 @@
 {%  extends 'base.html' %}
 {% block content %}
     <h1 class="page_title">Mínar sölur</h1>
+    <div class="button-sell-all-items">
+    {% for item in items %}
+        {% include 'my_sales/single_item.html' with item=item  %}
+    {% endfor %}
+    </div>
 {% endblock %}
