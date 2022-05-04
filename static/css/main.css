@@ -10,7 +10,7 @@ img{
     width: 250px;
     height: 350px;
     background-color: #98D7D1;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -18,7 +18,7 @@ img{
 .is_accepted{
     width: 45%;
     background-color: mediumseagreen;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     font-size: 18px;
     padding-left: 10px;
@@ -33,7 +33,7 @@ img{
 }
 #searchbar{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     border-style: solid;
     border-color: darkgray;
     border-width: 1px;
@@ -57,7 +57,7 @@ img{
     padding: 15px;
     max-width: 40%;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 #top_items_register{
     display: flex;
@@ -89,7 +89,7 @@ img{
     padding: 15px;
     max-width: 30%;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     flex-wrap: wrap-reverse;
 }
 #login_img{
@@ -110,7 +110,7 @@ img{
 .confirm_button{
     background-color: #325D79;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 18px;
     padding: 5px;
     border-width: 0;
@@ -122,7 +122,7 @@ img{
 .form-control{
     background-color: #E5E5E5;
     border: #A6A6A6;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 #register_image{
     border-radius: 50%;
@@ -166,7 +166,7 @@ img{
     margin-right: 35px;
     margin-top: 27px;
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
-    border-radius: 15px;
+    border-radius: 5px;
 
 }
 
@@ -185,7 +185,7 @@ img{
     margin-right: 35px;
     margin-top: 27.5px;
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
-    border-radius: 15px;
+    border-radius: 5px;
 
 }
 
@@ -215,7 +215,7 @@ img{
 .button-single-item {
     background-color: #98D7D1;
     filter: drop-shadow(-3px 2px 1px rgba(0, 0, 0, 0.25));
-    border-radius: 15px;
+    border-radius: 5px;
     width: 100%;
     height: 250px;
     border-style: none;
@@ -224,7 +224,7 @@ img{
 }
 
 .item-sell-img {
-    border-radius: 10px;
+    border-radius: 5px;
     margin: auto 0 auto;
     width: 100%;
 }
