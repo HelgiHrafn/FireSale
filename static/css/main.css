@@ -6,6 +6,9 @@ img{
     max-width: 100%;
     max-height: 100%;
 }
+.form-horizontal{
+    margin-top:140px;
+}
 .offer_item{
     width: 250px;
     height: 350px;
@@ -150,7 +153,6 @@ img{
     object-fit: cover;
     padding:10px
 }
-
 .navbar-button {
     background-color: #F26627;
     background-size: 300px;
