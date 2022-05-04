@@ -225,6 +225,16 @@ img{
     display: flex;
     flex-direction: column;
 }
+.single-my_sales-item{
+    background-color: #98D7D1;
+    filter: drop-shadow(-3px 2px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    width: 100%;
+    height: 350px;
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+}
 
 .item-sell-img {
     border-radius: 5px;
