@@ -11,8 +11,8 @@ class UserCreateForm(ModelForm):
             'first_name:': widgets.TextInput(attrs={'class': 'form-control'}),
             'last_name:': widgets.TextInput(attrs={'class': 'form-control'}),
             'email': widgets.TextInput(attrs={'class': 'form-control'}),
-            'password': widgets.TextInput(attrs={'class': 'form-control'}),
-        }
+            'password': widgets.PasswordInput(attrs={'class': 'form-control'}),
+ }
         labels = {
             'user_name': 'Notendanafn',
             'first_name': 'Fornafn',
@@ -20,5 +20,9 @@ class UserCreateForm(ModelForm):
             'email': 'Netfang',
             'password': 'Lykilorð'
         }
+
+
+
+
 
 
