@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from register.forms.user_form import UserCreateForm
 
 
@@ -9,7 +9,10 @@ def index(request):
 
 def create_user(request):
     if request.method == 'POST':
-        print(1)
+        form = UserCreateForm(data=request.POST)
+        if form.is_valid():
+            user = form.save()
+            return redirect('login-index')
     else:
         form = UserCreateForm()
     return render(request, 'register/create_user.html', {
