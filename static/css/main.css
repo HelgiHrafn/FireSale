@@ -119,6 +119,14 @@ img{
     padding: 5px;
     border-width: 0;
 }
+.secondary_button{
+    background-color: #98D7D1;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px;
+    border-width: 0;
+}
 .input-box{
     width: 100%;
 }
@@ -287,10 +295,23 @@ img{
     height: 500px;
     margin: 0 5% 0 5%;
     display: flex;
-    flex-direction: column;
 }
 .profile-image{
     border-radius: 50%;
     height: 250px;
     margin: auto;
+}
+.bio-container{
+    background-color: lightgrey;
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 200px;
+    width: 350px;
+}
+
+.profile-buttons{
+    display: flex;
+    flex-direction: column;
 }
