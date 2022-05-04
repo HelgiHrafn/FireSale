@@ -253,3 +253,17 @@ img{
     margin-bottom: 20px;
 }
 /* ALL ITEMS CSS FROM DB END HERE */
+
+.profile-container{
+    background-color: white;
+    border-radius: 5px;
+    height: 500px;
+    margin: 0 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+}
+.profile-image{
+    border-radius: 50%;
+    height: 250px;
+    margin: auto;
+}
