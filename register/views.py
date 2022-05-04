@@ -12,7 +12,7 @@ def create_user(request):
         print(1)
     else:
         form = UserCreateForm()
-    return render(request, 'register/create_user.html', {
+    return render(request, 'register/index.html', {
         'form': form
     })
 
