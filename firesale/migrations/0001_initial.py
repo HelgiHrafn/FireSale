@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('login', '0001_initial'),
+        #('login', '0001_initial'),
     ]
 
     operations = [
@@ -28,8 +28,8 @@ class Migration(migrations.Migration):
                 ('item_price', models.IntegerField()),
                 ('item_image', models.CharField(max_length=9999)),
                 ('item_description', models.CharField(max_length=150)),
-                ('item_condition', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='firesale.condition')),
-                ('item_seller', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='login.user')),
+                ('item_condition', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='firesale.condition'))
+                #('item_seller', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='login.user')),
             ],
         ),
     ]

@@ -1,5 +1,6 @@
 from django.db import models
-from login.models import User
+from django.contrib.auth.models import User
+
 
 # Here we probably have models for Items that are available for sale
 

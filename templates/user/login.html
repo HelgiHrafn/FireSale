@@ -1,0 +1,20 @@
+
+{%  extends 'base.html' %}
+{% block content %}
+    <h2 class="page_title">Innskráning</h2>
+    <div id="login_box">
+        <img id="login_img" src="/static/images/logo_temp.png" alt="placeholder image">
+        <form method="post" class="form-horizontal">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="confirm_button" value="Login"/>
+        </form>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+

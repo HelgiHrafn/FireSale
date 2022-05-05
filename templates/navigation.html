@@ -8,8 +8,17 @@
     </div>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a class = "navbar-button" href="{% url 'register-create-user' %}">Nýskráning</a></li>
-        <li><a class = "navbar-button" href="{% url 'login-index' %}">Skrá inn</a></li>
-      </ul>
+        {% if user.is_authenticated %}
+            <ul class="nav navbar-nav navbar-right">
+            <li><a id = "navbar_post_sale_button" class = "navbar-button" href="{% url 'post_sale-index' %}">Selja nýjan hlut</a></li> <li><a class = "navbar-button" href="{% url 'my_offers-index' %}">Mín tilboð</a></li>
+            <li><a class = "navbar-button" href="{% url 'my_sales-index' %}">Mínar sölur</a></li>
+            <li><a class = "profile-button" href="{% url 'profile' %}">Minn prófíll</a></li>
+                <li><a class = "navbar-button" href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        {% else %}
+            <li><a class = "navbar-button" href="{% url 'register' %}">Nýskráning</a></li>
+            <li><a class = "navbar-button" href="{% url 'login' %}">Skrá inn</a></li>
+        {% endif %}
+ </ul>
     </div><!-- /.navbar-collapse -->
 </nav>

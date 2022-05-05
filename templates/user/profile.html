@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page_title">Prófíllinn minn</h1>
+    <form class="form-horizontal" action="{% url 'profile' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="confirm_button" value="Update" />
+    </form>
+{% endblock %}
+
+

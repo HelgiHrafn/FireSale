@@ -39,11 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'firesale.apps.FiresaleConfig',
-    'login.apps.LoginConfig',
-    'register.apps.RegisterConfig',
     'my_offers.apps.MyOffersConfig',
     'my_sales.apps.MySalesConfig',
     'post_sale.apps.PostSaleConfig',
+    'user.apps.UserConfig',
     
 ]
 
@@ -133,6 +132,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+
+LOGIN_URL = '/user/login'
+LOGIN_REDIRECT_URL = '/user/profile'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
