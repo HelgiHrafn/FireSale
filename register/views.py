@@ -10,6 +10,7 @@ def index(request):
 def create_user(request):
     if request.method == 'POST':
         form = UserCreateForm(data=request.POST)
+        print(form.data)
         if form.is_valid():
             user = form.save()
             return redirect('login-index')

@@ -7,6 +7,10 @@
             </div>
             {% csrf_token %}
             {{ form }}
+            <div class="input-box">
+            <label for="confirm_password">Staðfesta lykilorð</label>
+            <input type="password" id="confirm_password" class="form-control" >
+            </div>
             <input type="submit" value="Stofna aðgang" class="confirm_button" style="clear:both; margin: 10px 0">
         </form>
     </div>
