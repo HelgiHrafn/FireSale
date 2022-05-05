@@ -233,6 +233,7 @@ textarea{
 }
 
 .post_sale_left_side {
+    display: flex;
     order: 1;
     flex: 1;
     flex-direction: column;
@@ -256,6 +257,7 @@ textarea{
     width: 350px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 35px;
 }
 
 .upload_img_button{
@@ -265,15 +267,17 @@ textarea{
 
 .post_sale_img_box {
     align-items: center;
+    height:250px;
     justify-content: center;
     width: 350px;
     padding: 30px;
     margin-left: auto;
     margin-right: 137px;
+    margin-bottom: 20px;
     display: block;
 }
 .item_description {
-    margin-left: 105px;
+    margin-left: 110px;
 }
 #post_sale_image {
     justify-content: center;
