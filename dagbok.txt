@@ -19,3 +19,5 @@ Vika 2:
             Fyrstu skref tekin í database vinnu
 
         4/5:
+            HTML + CSS komið á flestum síðum
+            Hægt að búa til user í gegnum síðuna, tengt við database.

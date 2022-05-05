@@ -9,7 +9,7 @@
                 <form><textarea></textarea></form></div>
         </div>
         <div class="post_sale_right_side">
-            <div class = post_sale_top_right> <h3>TOP RIGHT SIDE</h3>
+            <div class = post_sale_top_right>
                 <button class="secondary_button upload_img_button">Hlaða upp mynd</button>
                 <h4>Mynd frá neti</h4>
                 <button class="template_button">Hlekkur...</button>
@@ -17,13 +17,21 @@
                 <button class="template_button"></button>
 
             </div>
-            <div class = post_sale_bottom_right> <h3>BTM RIGHT SIDE</h3>
-                <button class="template_button">Ástand-dropdown</button>
+            <div class = post_sale_bottom_right>
+                <h4><label for="select_condition">Ástand vöru:</label></h4>
+                    <select name="select_condition" id="select_condition">
+                        <option value="Mjoggott">Mjög gott</option>
+                        <option value="Ágætt">Gott</option>
+                        <option value="Lélegt">Ágætt</option>
+                    </select>
+
                 <h4>Verð</h4>
                 <button class="template_button"></button>
+                <p></p>
             <div class="post_sale_bottom_buttons">
-                <button class="secondary_button">Hætta við</button>
-                <button class="confirm_button">Halda áfram</button>
+                <h4></h4>
+                <button class="secondary_button post_sale_btm_btns">Hætta við</button>
+                <button class="confirm_button post_sale_btm_btns post_sale_continue_btn">Halda áfram</button>
             </div>
             </div>
 
