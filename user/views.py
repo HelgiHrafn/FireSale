@@ -29,6 +29,6 @@ def profile(request):
             profile.save()
             return redirect('profile')
     return render(request, 'user/profile.html', {
-        'form': ProfileForm(instance=profile)
+        'form': ProfileForm(instance=profile),
     })
 
