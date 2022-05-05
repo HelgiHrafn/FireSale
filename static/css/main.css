@@ -376,9 +376,7 @@ textarea{
 
 .each.item {
     width: 18%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+    margin: 1%;
 }
 /* ALL ITEMS CSS FROM DB END HERE */
 /* My profile starts */
