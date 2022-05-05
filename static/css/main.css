@@ -394,7 +394,7 @@ textarea{
 .profile-image{
     border-radius: 50%;
     height: 250px;
-    margin: 40px;
+    margin: 40px 40px 40px 0;
 }
 .bio-container{
     background-color: #EFEEEE;
