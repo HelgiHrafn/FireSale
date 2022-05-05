@@ -215,6 +215,16 @@ textarea{
     text-align: center;
 }
 
+.template_button {
+    width: 300px;
+    text-align: start;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px;
+    border-width: 1;
+}
+
 .post_sale_container {
     background-color: #FFFCFC;
     display:flex;
@@ -248,6 +258,11 @@ textarea{
     margin-right: auto;
 }
 
+.upload_img_button{
+    justify-content: center;
+    align-content: center;
+}
+
 .post_sale_img_box {
     align-items: center;
     justify-content: center;
@@ -274,16 +289,21 @@ textarea{
     height: 50%;
     order: 1;
     flex: 1;
-    justify-content: space-evenly;
 }
 
 .post_sale_bottom_right{
-    height: 50%;
+    height: 35%;
     order: 2;
     flex: 1;
     flex-basis: auto;
     justify-content: space-evenly;
 
+}
+
+.post_sale_bottom_buttons{
+    height: 15%;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 /* ALL ITEMS CSS FROM DB BEGIN HERE */
