@@ -1,6 +1,6 @@
 {%  extends 'base.html' %}
 {% block content %}
-    <h1 class="page_title">Prófíllinn minn</h1>
+    <h1 class="page_title">Breyta prófíl</h1>
     <div class="profile-container">
         <div class="profile-image-and-bio">
             <img class="profile-image" src="/static/images/blank-profile-picture-973460_1280.png" alt="your profile picture">
@@ -11,12 +11,5 @@
             </div>
         </div>
         </div>
-
-        <div class="profile-buttons">
-            <a href="{% url 'edit_profile.html' %}" id="change_profile" class="confirm_button">Breyta prófíl</a>
-            <a id="older_sales" class="secondary_button">Gamlar sölur</a>
-            <a id="older buys" class="secondary_button">Gömul kaup</a>
-        </div>
-
     </div>
 {% endblock %}
