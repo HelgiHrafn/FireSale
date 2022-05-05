@@ -21,3 +21,12 @@ Vika 2:
         4/5:
             HTML + CSS komið á flestum síðum
             Hægt að búa til user í gegnum síðuna, tengt við database.
+
+        5/5:
+            Endurhönnun á 'apps'.
+                Sameinum:
+                    Register
+                    Login
+                    My profile
+                Sameinum:
+
