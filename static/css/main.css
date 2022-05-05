@@ -129,6 +129,7 @@ textarea{
     padding: 5px;
     border-width: 0;
     margin: 5px;
+    filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
 }
 .secondary_button{
     background-color: #98D7D1;
@@ -138,6 +139,7 @@ textarea{
     padding: 5px;
     border-width: 0;
     margin: 5px;
+    filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
 }
 .input-box{
     width: 100%;
