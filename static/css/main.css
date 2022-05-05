@@ -175,7 +175,6 @@ textarea{
 .navbar-logo {
     width: 30%;
     height: 30%;
-    border-radius: 50%;
     object-fit: cover;
     padding:10px
 }
