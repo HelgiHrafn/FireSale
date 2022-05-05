@@ -365,7 +365,7 @@ textarea{
     margin-bottom: 20px;
 }
 /* ALL ITEMS CSS FROM DB END HERE */
-
+/* My profile starts */
 .profile-container{
     background-color: white;
     border-radius: 5px;
@@ -381,13 +381,17 @@ textarea{
     margin: 40px;
 }
 .bio-container{
-    background-color: lightgrey;
+    background-color: #EFEEEE;
     border-color: darkgray;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
     height: 200px;
     width: 350px;
+    padding: 5px 10px 5px 10px;
+}
+.user-bio{
+    text-align: justify;
 }
 
 .profile-buttons{
@@ -400,3 +404,4 @@ textarea{
     display: flex;
     margin: auto auto 0 auto;
 }
+/* my profile ends */
