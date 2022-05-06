@@ -11,7 +11,7 @@ class ItemCreateForm(ModelForm):
             'item_price': widgets.NumberInput(attrs={'class': 'form-control'}),
             'item_image': widgets.TextInput(attrs={'class': 'form-control'}),
             'item_condition': widgets.Select(attrs={'class': 'form-control'}),
-            'item_description': widgets.TextInput(attrs={'class': 'form-control'}),
+            'item_description': widgets.TextInput(attrs={'class': 'edit_form_control form-control'}),
         }
 
         labels = {

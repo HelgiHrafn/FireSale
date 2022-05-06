@@ -243,7 +243,8 @@ textarea{
     order: 1;
     flex: 1;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    padding-left: 5%;
 
 }
 
@@ -252,9 +253,41 @@ textarea{
     order: 2;
     flex: 1;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    padding-left: 10%;
 }
 
+.post_sale_submit_box{
+    margin: 5px;
+    justify-content:flex-start;
+    max-width: 75%;
+}
+#post_sale_form_item_description{
+    justify-content: flex-end;
+    align-items: end;
+    padding-top:-1%;
+    margin-left: 10%;
+}
+#post_sale_form_item_name{
+    padding-bottom: 2%;
+    margin-left: 10%
+}
+#post_sale_form_item_image, #post_sale_form_item_condition, #post_sale_form_item_price{
+    padding-bottom:5%;
+}
+
+.post_sale_left_text{
+    margin-left:10%;
+}
+
+.post_sale_right_text{
+    margin-left:1%;
+}
+
+.edit_form_control{
+    height: 200px;
+}
+/* OLD POST SALE CODE
 .post_sale_description {
     flex-basis: 20%;
     justify-content: center;
@@ -330,17 +363,14 @@ textarea{
 #post_sale_textarea{
     margin-left:4px;
 }
-.post_sale_submit_box{
-    margin: 5px;
-    justify-content:center;
-    max-width: 75%;
-}
+
 
 .post_sale_btm_btns{
     height: 35px;
     margin-top: 5px;
     margin-right: 5px;
 }
+/*
 /* ALL ITEMS CSS FROM DB BEGIN HERE */
 .item-sell-name, .item-sell-price {
     float: left;

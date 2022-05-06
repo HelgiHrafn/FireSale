@@ -2,12 +2,21 @@
 {% block content %}
     <h2 class="page_title">Selja nýjan hlut</h2>
     <div class="post_sale_container">
-        <div class="post_sale_left_side"></div>
-
+        <div class="post_sale_left_side">
+            <h4 class="post_sale_left_text">Titill</h4>
+            <div class="post_sale_submit_box" id="post_sale_form_item_name">{{ form.item_name }}</div>
+            <h4 class="post_sale_left_text">Lýsing</h4>
+            <div class="post_sale_submit_box" id ="post_sale_form_item_description">{{ form.item_description }}</div>
+        </div>
         <div class="post_sale_right_side">
             <form class="form-horizontal" action="{% url 'post_sale' %}" method="post">
             {% csrf_token %}
-                <div class="post_sale_submit_box">{{ form }}</div>
+                <h4 class="post_sale_right_text">Mynd</h4>
+                <div class="post_sale_submit_box" id="post_sale_form_item_image">{{ form.item_image }}</div>
+                <h4 class="post_sale_right_text">Ástand</h4>
+                <div class="post_sale_submit_box" id="post_sale_form_item_condition">{{ form.item_condition }}</div>
+                <h4 class="post_sale_right_text">Verð</h4>
+                <div class="post_sale_submit_box" id="post_sale_form_item_price">{{ form.item_price }}</div>
 
             <input type="submit" value="Setja vöru á sölu" class="confirm_button">
             </form>
