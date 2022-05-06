@@ -252,7 +252,6 @@ textarea{
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10%;
 }
 
 .post_sale_submit_box{
@@ -263,15 +262,15 @@ textarea{
 #post_sale_form_item_description{
     justify-content: flex-end;
     align-items: end;
-    padding-top:-1%;
     margin-left: 10%;
+    margin-bottom: 3%;
 }
 #post_sale_form_item_name{
-    padding-bottom: 2%;
-    margin-left: 10%
+    padding-bottom: 5%;
+    margin-left: 10%;
 }
 #post_sale_form_item_image, #post_sale_form_item_condition, #post_sale_form_item_price{
-    padding-bottom:5%;
+    padding-bottom:6%;
 }
 
 .post_sale_left_text{
