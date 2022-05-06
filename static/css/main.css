@@ -174,8 +174,6 @@ textarea{
     z-index: 100;
 }
 .navbar-logo {
-    width: 30%;
-    height: 30%;
     object-fit: cover;
     padding:10px
 }
@@ -410,7 +408,7 @@ textarea{
     overflow: hidden;
     margin: 40px 40px 40px 0;
     display: inline-block;
-    object-fit: fill;
+    object-fit: cover;
 }
 .bio-container{
     background-color: #EFEEEE;
@@ -455,3 +453,8 @@ textarea{
     margin-top: 20px;
 }
 /* my profile ends */
+
+.navbar-header{
+    width: 108px;
+    height: 108px;
+}
