@@ -234,7 +234,10 @@ textarea{
 
 .post_sale_container {
     background-color: #FFFCFC;
+    border-radius: 5px;
     display:flex;
+    margin: 0 10% 0 10%;
+    height: 500px;
 }
 
 .post_sale_left_side {
