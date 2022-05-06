@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+   <h2 class="page_title">Bjóða í vöru</h2>
+    <div class="profile-container">
+    <div class="image-container">
+    <img class="item-sell-img" src="{{ item.item_image }}" alt="item-for-sale">
+    </div>
+        <p>Nafn:{{ item.item_name }}</p>
+        <p>Verð:{{ item.price }}</p>
+        <p>Ástand:{{ item.item_condition }}</p>
+        <p>Lýsing:{{ item.item_description }}</p>
+</div>
+{% endblock %}

@@ -6,7 +6,6 @@ from firesale.forms.item_form import ItemCreateForm
 from firesale.models import Item
 
 
-
 # Create your views here.
 def register(request):
     if request.method == 'POST':
