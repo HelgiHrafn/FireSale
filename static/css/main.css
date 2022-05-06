@@ -415,6 +415,7 @@ textarea{
     overflow: hidden;
     margin: 40px 40px 40px 0;
     display: inline-block;
+    object-fit: fill;
 }
 .bio-container{
     background-color: #EFEEEE;
