@@ -264,13 +264,15 @@ textarea{
     align-items: end;
     margin-left: 10%;
     margin-bottom: 3%;
+    margin-top: 2%;
 }
 #post_sale_form_item_name{
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     margin-left: 10%;
 }
 #post_sale_form_item_image, #post_sale_form_item_condition, #post_sale_form_item_price{
-    padding-bottom:6%;
+    padding-bottom:2%;
+    max-width: 60%;
 }
 
 .post_sale_left_text{
@@ -281,6 +283,11 @@ textarea{
     margin-left:1%;
 }
 
+#post_sale_confirm_button{
+    max-width: 35%;
+    margin-top: 3%;
+    margin-bottom:5%;
+}
 .edit_form_control{
     height: 200px;
 }
