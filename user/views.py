@@ -27,11 +27,15 @@ def profile(request):
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
-            return redirect('profile')
+            return redirect('profile_edit')
 
-    return render(request, 'user/profile.html', {
+    return render(request, 'user/profile_edit.html', {
         'form': ProfileForm(instance=profile),
     })
+
+
+def index(request):
+    return render(request, 'user/profile.html', {'User': request.user, 'Image': Profile.objects.get(user=request.user.id)})
 
 
 def profile2(request):

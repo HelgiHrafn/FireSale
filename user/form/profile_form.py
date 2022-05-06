@@ -12,4 +12,8 @@ class ProfileForm(ModelForm):
             'profile_bio': widgets.TextInput(attrs={'class': 'form-control'}),
         }
 
-
+        labels = {
+            'profile_name': 'Nafn',
+            'profile_image': 'Mynd',
+            'profile_bio': 'Um mig',
+        }

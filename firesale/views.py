@@ -7,3 +7,6 @@ def index(request):
     context = {'items': Item.objects.all().order_by('item_name')}
     return render(request, 'firesale/index.html', context)
 
+
+
+
