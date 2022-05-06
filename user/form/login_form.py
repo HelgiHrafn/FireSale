@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm,
+"""from django.contrib.auth.forms import UserCreationForm,
 from django.forms import widgets
 
 from user.models import Profile
@@ -10,3 +10,4 @@ class LoginForm(UserCreationForm):
             'username': widgets.TextInput(attrs={'class': 'form-control'})
             'password': widgets.TextInput(attrs={'class': 'form-control'})
         }
+"""
