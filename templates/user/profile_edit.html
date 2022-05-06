@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 class="page_title">Prófíllinn minn</h1>
-    <form class="form-horizontal" action="{% url 'profile_edit' %}" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="confirm_button" value="Uppfæra" />
-    </form>
+<h1 class="page_title">Breyta prófíl</h1>
+    <div class="edit-profile-container">
+        <form class="form-horizontal" action="{% url 'profile_edit' %}" method="post">
+            {% csrf_token %}
+            <div class="edit-profile-form">
+                {{ form }}
+            </div>
+            <div class="edit-profile-button">
+                <a class="secondary_button" href="{% url 'profile' %}">Til Baka</a>
+                <input type="submit" class="confirm_button" value="Uppfæra"/>
+            </div>
+        </form>
+    </div>
+
 {% endblock %}
