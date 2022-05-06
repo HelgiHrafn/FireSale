@@ -1,11 +1,16 @@
 {%  extends 'base.html' %}
 {% block content %}
-    <h2 class="page_title">Selja nýjan hluttttttt</h2>
+    <h2 class="page_title">Selja nýjan hlut</h2>
     <div class="post_sale_container">
-        <form class="form-horizontal" action="{% url 'post_sale' %}" method="post">
+        <div class="post_sale_left_side"></div>
+
+        <div class="post_sale_right_side">
+            <form class="form-horizontal" action="{% url 'post_sale' %}" method="post">
             {% csrf_token %}
-            {{ form }}
+                <div class="post_sale_submit_box">{{ form }}</div>
+
             <input type="submit" value="Setja vöru á sölu" class="confirm_button">
-        </form>
+            </form>
+        </div>
     </div>
 {% endblock %}
