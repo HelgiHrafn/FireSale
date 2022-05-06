@@ -421,7 +421,7 @@ textarea{
 .profile-buttons{
     display: flex;
     margin: 0 auto auto auto;
-    justify-content: space-evenly;
+    justify-content: center;
 
 }
 .profile-image-and-bio{

@@ -1,18 +1,25 @@
 {%  extends 'base.html' %}
 {% block content %}
+    <h1 class="page_title">Prófíllinn minn</h1>
     <div class="profile-container">
         <div class="profile-image-and-bio">
             <img class="profile-image" src="{{ Image.profile_image }}" alt="your profile picture">
         <div class="profile-info">
             <h1 class="user-name">{{ User.username }}</h1>
             <div class="bio-container">
-                <p class="user-bio">{{ Image.profile_bio }}</p></div>
+                <p class="user-bio">{{ Image.profile_bio }}</p>
+            </div>
         </div>
         </div>
+        {% if user.is_authenticated %}
+            <div class="profile-buttons">
+                <a class="confirm_button" href="{% url 'profile_edit' %}">Breyta prófíl</a>
+                <a id="older_sales" class="secondary_button">Gamlar sölur</a>
+                <a id="older buys" class="secondary_button">Gömul kaup</a>
+            </div>
+        {% endif %}
     </div>
-    {% if user.is_authenticated %}
-      <a class = "profile-button" href="{% url 'profile_edit' %}">Breyta prófíll</a>
-    {% endif %}
+
 {% endblock %}
 
 
