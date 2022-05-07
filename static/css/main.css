@@ -493,6 +493,35 @@ textarea{
 }
 /* my profile ends */
 
+.offer-container {
+    background-color: white;
+    border-radius: 5px;
+    height: 600px;
+    margin: 0 15% 0 15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.offer-img-container{
+    width: 45%;
+    height: 95%;
+    display: flex;
+    margin: 2.5%;
+}
+.item-offer-img{
+    max-height: 90%;
+    margin: auto;
+}
+.item-info-container{
+    width: 45%;
+    height: 95%;
+    display: flex;
+    margin: 2.5%;
+    flex-direction: column;
+}
+.offer-input-container{
+    align-self: flex-end;
+}
 .navbar-header{
     width: 108px;
     height: 108px;

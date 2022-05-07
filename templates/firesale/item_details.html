@@ -1,13 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
    <h2 class="page_title">Bjóða í vöru</h2>
-    <div class="profile-container">
-    <div class="image-container">
-    <img class="item-sell-img" src="{{ item.item_image }}" alt="item-for-sale">
+    <div class="offer-container">
+        <div class="offer-img-container">
+            <img class="item-offer-img" src="{{ item.item_image }}" alt="item-for-sale">
+        </div>
+        <div class="item-info-container">
+            <p>Nafn: {{ item.item_name }}</p>
+            <p>Verð: {{ item.price }}</p>
+            <p>Ástand: {{ item.item_condition }}</p>
+            <p>Lýsing: {{ item.item_description }}</p>
+            <div class="offer-input-container">
+                <label for="make-offer-input">Gera tilboð:</label>
+                <input id="make-offer-input" class="form-control">
+                <a class="confirm_button">Staðfesta</a>
+            </div>
+        </div>
     </div>
-        <p>Nafn:{{ item.item_name }}</p>
-        <p>Verð:{{ item.price }}</p>
-        <p>Ástand:{{ item.item_condition }}</p>
-        <p>Lýsing:{{ item.item_description }}</p>
-</div>
 {% endblock %}
