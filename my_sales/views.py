@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from firesale.models import Item
 from bid.models import Bid
+from django.core.mail import send_mail
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -27,6 +29,28 @@ def get_item_highest_bid(id):
 
 
 def accept_bid(request, id, bid):
-    #Do something
+    item = Item.objects.get(id=id)
+    bid = Bid.objects.get(id=bid)
+    bid.bid_status = True
+    bid.save()
+    send_email(item.name, bid.id)
+
+
+    send_mail('Tilboð samþykkt',
+              'Hello hello',
+              'kristjanm20@ru.is',
+              ['bid.bid'],
+              fail_silently=False,
+              )
+        #Do something
     return render(request, 'my_sales/sell_confirm.html')
 
+
+def send_email(name, id):
+    user = User.objects.get(id=id)
+    send_mail('Tilboð samþykkt',
+              'Hello hello',
+              'kristjanm20@ru.is',
+              ['user.em'],
+              fail_silently=False,
+              )
