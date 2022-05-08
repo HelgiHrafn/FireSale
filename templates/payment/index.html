@@ -1,0 +1,11 @@
+{%  extends 'base.html' %}
+{% block content %}
+    <h2 class="page_title">Greiðsla</h2>
+
+        <form action="{% url 'payment' %}" method="post" class="form-horizontal">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="confirm_button"/>
+        </form>
+
+{% endblock %}

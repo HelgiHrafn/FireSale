@@ -25,4 +25,5 @@ urlpatterns = [
     path('my_profile/', include('my_profile.urls')),
     path('post_sale/', include('post_sale.urls')),
     path('user/', include('user.urls')),
+    path('payment/', include('payment.urls'))
 ]

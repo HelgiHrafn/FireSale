@@ -439,6 +439,7 @@ textarea{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+
 }
 .profile-image {
     border-radius: 50%;
@@ -497,30 +498,41 @@ textarea{
     background-color: white;
     border-radius: 5px;
     height: 600px;
-    margin: 0 15% 0 15%;
+    margin: 0 auto 0 auto;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+
 }
 .offer-img-container{
-    width: 45%;
-    height: 95%;
+    width: 95%;
+    height: 45%;
     display: flex;
-    margin: 2.5%;
+    margin: auto;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+
 }
 .item-offer-img{
     max-height: 90%;
-    margin: auto;
+    margin: auto 2.5% auto;
 }
 .item-info-container{
-    width: 45%;
-    height: 95%;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 2.5%;
+    width: 95%;
+    height: 45%;
     display: flex;
-    margin: 2.5%;
+    margin: auto;
     flex-direction: column;
+
 }
 .item-info{
-    font-size: 30px;
+    font-size: 20px;
 }
 .offer-input-container{
     align-self: flex-end;
@@ -528,4 +540,7 @@ textarea{
 .navbar-header{
     width: 108px;
     height: 108px;
+}
+#make-offer-button{
+    align-self: flex-end;
 }

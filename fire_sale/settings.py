@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'post_sale.apps.PostSaleConfig',
     'user.apps.UserConfig',
     'bid.apps.BidConfig',
+    'payment.apps.PaymentConfig'
     
 ]
 
