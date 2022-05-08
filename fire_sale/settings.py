@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'my_sales.apps.MySalesConfig',
     'post_sale.apps.PostSaleConfig',
     'user.apps.UserConfig',
+    'bid.apps.BidConfig',
     
 ]
 

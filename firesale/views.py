@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from firesale.models import Item
+from bid.forms.bid_form import BidCreateForm
+from bid.models import Bid
 
 
 # Create your views here.
@@ -14,5 +16,22 @@ def get_item_by_id(request, id):
     })
 
 
-
-
+def bid_item_by_id(request, id):
+    if request.method == 'POST':
+        form = BidCreateForm(data=request.POST)
+        print(form.data)
+        if form.is_valid():
+            amount = form.cleaned_data.get("bid_amount")
+            user = request.user.id
+            bid_item = id
+            form = Bid(bid_amount=amount, user_id=user, bid_item_id=bid_item)
+            form.save()
+            return redirect('firesale-index')
+    else:
+        bid_item = request.path
+        bid_item = int(bid_item[-2])
+        item = Bid(bid_item_id=bid_item)
+        form = BidCreateForm()
+    return render(request, 'firesale/item_bid.html', {
+        'item': item,
+        'form': form})
