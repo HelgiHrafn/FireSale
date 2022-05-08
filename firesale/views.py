@@ -11,9 +11,17 @@ def index(request):
 
 
 def get_item_by_id(request, id):
+    highest_bid = get_item_highest_bid(id)
     return render(request, 'firesale/item_details.html', {
-        'item': get_object_or_404(Item, pk=id)
+        'item': get_object_or_404(Item, pk=id),
+        'bid': highest_bid
     })
+
+
+def get_item_highest_bid(id):
+    bid = Bid.objects.filter(bid_item_id=id)
+    bid = bid.order_by('bid_amount').last()
+    return bid
 
 
 def bid_item_by_id(request, id):
