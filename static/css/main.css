@@ -519,6 +519,9 @@ textarea{
     margin: 2.5%;
     flex-direction: column;
 }
+.item-info{
+    font-size: 30px;
+}
 .offer-input-container{
     align-self: flex-end;
 }
