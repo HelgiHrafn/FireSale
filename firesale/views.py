@@ -20,8 +20,11 @@ def get_item_by_id(request, id):
 
 def get_item_highest_bid(id):
     bid = Bid.objects.filter(bid_item_id=id)
-    bid = bid.order_by('bid_amount').last()
-    return bid
+    if bid is None:
+        return bid
+    else:
+        bid = bid.order_by('bid_amount').last()
+        return bid
 
 
 def bid_item_by_id(request, id):
@@ -37,6 +40,7 @@ def bid_item_by_id(request, id):
             return redirect('firesale-index')
     else:
         bid_item = request.path
+        bid_item = bid_item.split('/')
         bid_item = int(bid_item[-2])
         item = Bid(bid_item_id=bid_item)
         form = BidCreateForm()
