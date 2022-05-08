@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page_title">Mínar sölur</h1>
+    {%  include 'searchbar.html' %}
+    <div class="button-sell-all-items">
+    {% for item in items %}
+        {% include 'my_sales/single_sell.html' with item=item  %}
+        </div>
+    {% endfor %}
+{% endblock %}

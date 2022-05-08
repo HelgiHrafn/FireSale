@@ -1,5 +1,5 @@
 <div class="each item">
-    <a href ="#">
+    <a href ="/my_sales/{{ item.id }}">
         <div class="single-my_sales-item">
         <div class="image-container">
             <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.item_image }}" />
@@ -7,7 +7,8 @@
         <span class="item-sell-name">{{ item.item_name }}</span>
         <span class="item-sell-price">{{ item.item_price }}</span>
             <p>setja tilboð osfrv hér</p>
-            <button class="confirm_button">Samþykkja tilboð</button>
+            <p>{{ bid.bid_amount }}</p>
+            <button class="confirm_button">Skoða sölu</button>
         </div>
     </a>
 </div>

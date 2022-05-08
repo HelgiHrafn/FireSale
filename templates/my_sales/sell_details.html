@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+   <h2 class="page_title">Samþykkja tilboð</h2>
+    <div class="offer-container">
+        <div class="offer-img-container">
+            <img class="item-offer-img" src="{{ item.item_image }}" alt="item-for-sale">
+        </div>
+        <div class="item-info-container">
+            <p>Nafn: {{ item.item_name }}</p>
+            <p>Verð: {{ item.item_price }}</p>
+            <p>Ástand: {{ item.item_condition }}</p>
+            <p>Lýsing: {{ item.item_description }}</p>
+            <p>Hæsta boð: {{ bid.bid_amount }}</p>
+            {% if user.is_authenticated and  bid.bid_amount > 0 %}
+            <a class="confirm_button" href="{% url 'sell-confirm' item.id bid.id %}">Samþykkja tilboð</a>
+            <div class="offer-input-container">
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
