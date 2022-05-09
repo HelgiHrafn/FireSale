@@ -9,13 +9,13 @@ from bid.models import Bid
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        items = [ {
+        items = [{
             'id': x.id,
             'name': x.item_name,
             'price': x.item_price,
             'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(item_name__icontains=search_filter)]
-        return JsonResponse({ 'data': items })
+        return JsonResponse({'data': items})
     context = {'items': Item.objects.all().order_by('item_name')}
     return render(request, 'firesale/index.html', context)
 

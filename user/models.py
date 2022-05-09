@@ -11,4 +11,3 @@ class Profile(models.Model):
     profile_rating = models.IntegerField(null=True)
     profile_email = models.EmailField(max_length=254, null=True)
 
-
