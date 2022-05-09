@@ -1,0 +1,10 @@
+{%  extends 'base.html' %}
+{% block content %}
+    <h2 class="page_title">Pósta myndum</h2>
+   <form action="{% url 'post_sale_images' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Setja inn mynd" class="confirm_button" id="post_sale_confirm_button">
+
+    </form>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.forms import ModelForm, widgets
-from firesale.models import Item
+from firesale.models import Item, ItemImage
 
 
 class ItemCreateForm(ModelForm):
@@ -20,4 +20,17 @@ class ItemCreateForm(ModelForm):
             'item_image': 'Mynd',
             'item_condition': 'Ástand',
             'item_description': 'Lýsing',
+        }
+
+
+class ItemImageForm(ModelForm):
+    class Meta:
+        model = ItemImage
+        exclude = ['id', 'item']
+        widgets = {
+            'image': widgets.TextInput(attrs={'class': 'form-control'})
+        }
+
+        labels = {
+            'image': 'Mynd'
         }

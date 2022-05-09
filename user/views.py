@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from user.form.profile_form import ProfileForm
 from user.models import Profile
-from firesale.forms.item_form import ItemCreateForm
-from firesale.models import Item
+from firesale.forms.item_form import ItemCreateForm, ItemImageForm
+from firesale.models import Item, ItemImage
 
 
 # Create your views here.
@@ -46,13 +46,12 @@ def post_sale(request):
         if form.is_valid():
             name = form.cleaned_data.get("item_name")
             price = form.cleaned_data.get("item_price")
-            image = form.cleaned_data.get("item_image")
             condition = form.cleaned_data.get("item_condition")
             description = form.cleaned_data.get("item_description")
-            item = Item(item_name=name, item_price=price, item_image=image, item_condition=condition,
+            item = Item(item_name=name, item_price=price, item_condition=condition,
                         item_description=description, item_seller=request.user)
             item.save()
-            return redirect('profile')
+            return render(request, 'user/post_sale_img_option.html')
     else:
         form = ItemCreateForm()
         #TODO: instance ItemCreateForm()
@@ -61,16 +60,24 @@ def post_sale(request):
     })
 
 
-def profile2(request):
-    user = request.user
-    if request.method == 'POST':
-        form = UserChangeForm(instance=user, data=request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            form.user = request.user
-            user.save()
-            return redirect('profile')
+def post_sale_images(request):
+    form = ItemImageForm()
 
-    return render(request, 'user/profile.html', {
-        'form': UserChangeForm(instance=user),
+    if request.method == 'POST':
+        form = ItemImageForm(data=request.POST)
+        if form.is_valid():
+            image = form.cleaned_data.get('image')
+            user_id = request.user.id
+            item = Item.objects.filter(item_seller_id=user_id).latest('id')
+            form = ItemImage(image=image, item_id=item.id)
+            form.save()
+            form = ItemImageForm()
+            return render(request, 'user/post_sale_images.html', {
+                'form': form,
+            })
+        else:
+            form = ItemImageForm()
+    return render(request, 'user/post_sale_images.html', {
+        'form': form,
     })
+
