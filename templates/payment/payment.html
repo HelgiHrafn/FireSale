@@ -6,26 +6,29 @@
         {% csrf_token %}
             <div class="payment-container">
                 <div class="cardinfo-container">
+                    <h2>Kortaupplýsingar</h2>
                     <div class="payment-top">
-                        <h4>Kortanúmer</h4>
+                        <h3 class="payment-title">Kortanúmer</h3>
                         {{ form.card_number }}
                     </div>
                     <div class="payment-middle">
-                        <h4>Gildistími</h4>
+                        <h3 class="payment-title">Gildistími</h3>
                         {{ form.exp_month }}
-                        <p>/</p>
+                        <h3 class="payment-title">/</h3>
                         {{ form.exp_year }}
-                        <h4>Öryggisnúmer</h4>
+                        <h3 class="payment-title">Öryggisnúmer</h3>
                         {{ form.cvc }}
                     </div>
                     <div class="payment-bottom">
-                        <h4>Nafn korthafa</h4>
+                        <h3 class="payment-title">Nafn korthafa</h3>
                         {{ form.name }}
                     </div>
                 </div>
-                <button class="secondary_button">Til baka</button>
+                <div class="payment-buttons">
+                    <button class="secondary_button">Til baka</button>
                 <input type="submit" class="confirm_button" value="Halda áfram"/>
-            </div>
+                </div>
+                 </div>
         </form>
 
 {% endblock %}

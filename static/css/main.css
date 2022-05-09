@@ -557,15 +557,23 @@ textarea{
 
 .payment-container{
     background-color: white;
+    margin: auto 30% auto 30%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    height: 400px;
 }
 .cardinfo-container{
-    margin: auto 5px auto 5px;
+    margin: 5px;
 }
 .payment-middle{
     display: flex;
-    margin: 5%;
+}
+.payment-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.payment-title{
+    margin: 0;
 }
 /* Payment ends */
