@@ -4,11 +4,31 @@
 
         <form action="{% url 'payment-contact_info' %}" method="post" class="form-horizontal">
         {% csrf_token %}
-            <div class="payment-container">
-                {{ form }}
+            <div class="contact-container">
+                <h2 id="payment-head">Persónuupplýsingar</h2>
+                <div class="contact-rl">
+                    <div class="contact-right">
+                    <h3 class="payment-title">Fornafn:</h3>
+                    {{ form.first_name }}
+                    <h3 class="payment-title">Götuheiti:</h3>
+                    {{ form.street_name }}
+                    <h3 class="payment-title">Bæjarfélag:</h3>
+                    {{ form.city }}
+                    <h3 class="payment-title">Land:</h3>
+                    {{ form.first_name }}
+                </div>
+                <div class="contact-left">
+                    <h3 class="payment-title">Eftirnafn:</h3>
+                    {{ form.last_name }}
+                    <h3 class="payment-title">Húsnúmer:</h3>
+                    {{ form.street_number }}
+                    <h3 class="payment-title">Póstnúmer:</h3>
+                    {{ form.post_code }}
+                </div>
+                </div>
 
             <div class="payment-buttons">
-                    <button class="secondary_button">Til baka</button>
+                <button class="secondary_button">Til baka</button>
                 <input type="submit" class="confirm_button" value="Halda áfram"/>
             </div>
             </div>

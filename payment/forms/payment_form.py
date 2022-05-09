@@ -7,7 +7,7 @@ class PaymentForm(ModelForm):
         model = Payment
         exclude = ['id', 'user', 'payment_item']
         widgets = {
-            'card_number': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '10'}),
+            'card_number': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '16'}),
             'exp_month': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '2'}),
             'exp_year': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '2'}),
             'cvc': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '3'}),

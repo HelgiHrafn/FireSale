@@ -561,7 +561,7 @@ textarea{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    height: 400px;
+
     width: 350px;
     justify-content: flex-start;
     padding: 20px;
@@ -596,10 +596,36 @@ textarea{
     width: 40%;
     margin-right: 10%;
 }
+.payment-bottom{
+    margin-bottom: 20px;
+}
 .exp-date-container{
     display: flex;
 }
 #payment-head{
     margin: 20px auto 0 auto;
+}
+.contact-right{
+    width: 50%;
+    padding-right: 10px;
+}
+.contact-left{
+    width: 50%;
+    padding-left: 10px;
+}
+.contact-container{
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.contact-rl{
+    display: flex;
+    margin-top: 20px;
 }
 /* Payment ends */
