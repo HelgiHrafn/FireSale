@@ -1,0 +1,31 @@
+{%  extends 'base.html' %}
+{% block content %}
+    <h2 class="page_title">Greiðsla</h2>
+
+        <form action="{% url 'payment-payment' %}" method="post" class="form-horizontal">
+        {% csrf_token %}
+            <div class="payment-container">
+                <div class="cardinfo-container">
+                    <div class="payment-top">
+                        <h4>Kortanúmer</h4>
+                        {{ form.card_number }}
+                    </div>
+                    <div class="payment-middle">
+                        <h4>Gildistími</h4>
+                        {{ form.exp_month }}
+                        <p>/</p>
+                        {{ form.exp_year }}
+                        <h4>Öryggisnúmer</h4>
+                        {{ form.cvc }}
+                    </div>
+                    <div class="payment-bottom">
+                        <h4>Nafn korthafa</h4>
+                        {{ form.name }}
+                    </div>
+                </div>
+                <button class="secondary_button">Til baka</button>
+                <input type="submit" class="confirm_button" value="Halda áfram"/>
+            </div>
+        </form>
+
+{% endblock %}
