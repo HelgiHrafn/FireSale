@@ -4,8 +4,11 @@
 
         <form action="{% url 'payment-contact_info' %}" method="post" class="form-horizontal">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="confirm_button" value="Halda áfram"/>
+            <div class="payment-container">
+                {{ form }}
+
+                <input type="submit" class="confirm_button" value="Halda áfram"/>
+            </div>
         </form>
 
 {% endblock %}
