@@ -11,10 +11,15 @@ def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
         print(form.data)
+        print(form.errors)
         if form.is_valid():
-            print('check_validity')
-            form = form.save()
-            return redirect('login')
+                form.save()
+                return redirect('login')
+        else:
+            return render(request, 'user/register.html', {
+                'form': UserCreationForm(),
+                'message': form.errors
+            })
 
     return render(request, 'user/register.html', {
             'form': UserCreationForm()
