@@ -70,6 +70,7 @@ def post_sale_images(request):
             user_id = request.user.id
             item = Item.objects.filter(item_seller_id=user_id).latest('id')
             counter = ItemImage.objects.filter(item_id=item.id).count()
+            # We only want user to be able to post max 3 images
             if counter == 2:
                 return render(request, 'user/post_sale_images.html', {
                     'message': 'Hámark fjölda mynda náð'
