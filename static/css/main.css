@@ -544,3 +544,20 @@ textarea{
 #make-offer-button{
     align-self: flex-end;
 }
+/* Payment starts */
+
+.payment-container{
+    background-color: white;
+    border-radius: 5px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.cardinfo-container{
+    margin: auto 5px auto 5px;
+}
+.payment-middle{
+    display: flex;
+    margin: 5%;
+}
+/* Payment ends */

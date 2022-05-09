@@ -1,15 +1,39 @@
 from django.shortcuts import render
-from payment.forms.payment_form import Payment
+from payment.forms.payment_form import PaymentForm
+from payment.forms.contact_info_form import ContactInfoForm
 from firesale.models import Item
+
 
 # Create your views here.
 def index(request):
-    return render(request, 'payment/index.html')
+    return render(request, 'payment/payment.html')
+
 
 def payment(request):
     if request.method == 'POST':
-        form = Payment(data=request.POST)
+        form = PaymentForm(data=request.POST)
         if form.is_valid():
-            card_number = form.cleaned_data.get("card_number")
+            pay_info = form.save(commit=False)
+            pay_info.user = request.user
+            pay_info.save()
+            print("payment success")  # ATHHHHHHHHHHHHH
+    else:
+        form = PaymentForm()
+    return render(request, 'payment/payment.html', {
+        'form': form
+    })
 
 
+def contact_info(request):
+    if request.method == 'POST':
+        form = ContactInfoForm(data=request.POST)
+        if form.is_valid():
+            info = form.save(commit=False)
+            info.user = request.user
+            info.save()
+            print("contact info success")  # ATHHHHHHHHHHHHH
+    else:
+        form = ContactInfoForm()
+    return render(request, 'payment/contact_info.html',{
+        'form': form
+    })
