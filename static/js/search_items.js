@@ -11,7 +11,7 @@ $(document).ready(function() {
                                 <a href="/firesale/${d.id}">
                                     <button class = button-single-item>
                                     <span class="image-container">
-                                    <img class="item-sell-img" src="${d.firstImage}" alt="Image of iteam found via search query"/>
+                                    <img class="item-sell-img" src="${d.firstImage}" alt="Image of item found via search query"/>
                                     </span>
                                     <span class="item-sell-name">${d.name}</span>
                                     <span class="item-sell-price">${d.price}</span>
