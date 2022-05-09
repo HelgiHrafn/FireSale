@@ -32,20 +32,36 @@ def get_item_highest_bid(id):
 def accept_bid(request, id, bid):
     item = Item.objects.get(id=id)
     bid = Bid.objects.get(id=bid)
-    print(item)
-    print(id)
-    print(bid.id)
-    bid.bid_status = True
-    bid.save()
-    send_email_to_buyer(item.item_name, bid.user_id)
+    if not bid.bid_status:
+        print("hello")
+        bid.bid_status = True
+        print(bid.bid_status)
+        bid.save()
+        send_email_to_buyer(item.item_name, bid.user_id)
+        send_email_to_failed_bids(item.item_name, bid.bid_item_id)
+
     return render(request, 'my_sales/sell_confirm.html')
 
 
 def send_email_to_buyer(name, id):
     profile = Profile.objects.get(user_id=id)
     send_mail('FIRESALE: Tilboð samþykkt',
-              'Tilboð í vöru '+name+' hefur verið samþykkt. Skráðu þig inn til að ganga frá greiðslu.',
+              'Tilboð í vöru ' + name + ' hefur verið samþykkt. Skráðu þig inn til að ganga frá greiðslu.',
               'kristjanm20@ru.is',
               [profile.profile_email],
               fail_silently=True,
               )
+
+
+def send_email_to_failed_bids(name, item_id):
+    failed_bids = Bid.objects.filter(bid_item_id=item_id).exclude(bid_status=True).distinct('user_id')
+    # Send emails to all failed bids, only one email per user
+    for bid in failed_bids:
+        profile = Profile.objects.get(user_id=bid.user_id)
+        send_mail('FIRESALE: Tilboði/tilboðum hafnað',
+                  'Tilboði/tilboðum í vöru' + name + ' hefur/hafa verið hafnað.',
+                  'kristjanm20@ru.is',
+                  [profile.profile_email],
+                  fail_silently=True,
+                  )
+    # Do we want to delete these bids from the database ?
