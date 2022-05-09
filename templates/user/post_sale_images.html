@@ -4,7 +4,11 @@
    <form action="{% url 'post_sale_images' %}" method="post">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Setja inn mynd" class="confirm_button" id="post_sale_confirm_button">
-
+       {{ message }}
+       {% if message == 'Hámark fjölda mynda náð' %}
+           {% else %}
+                <input type="submit" value="Setja inn mynd" class="confirm_button" id="post_sale_confirm_button">
+       {% endif %}
     </form>
+    <button type="submit" onclick="location.href='{% url 'firesale-index' %}'">Forsíða</button>
 {% endblock %}
