@@ -557,23 +557,49 @@ textarea{
 
 .payment-container{
     background-color: white;
-    margin: auto 30% auto 30%;
+    margin: auto;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     height: 400px;
+    width: 350px;
+    justify-content: flex-start;
+    padding: 20px;
 }
 .cardinfo-container{
-    margin: 5px;
-}
-.payment-middle{
+    margin: 20px 5px 0 5px;
+    height: 75%;
     display: flex;
+    flex-direction: column;
 }
+
 .payment-buttons{
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: flex-end;
+    height: 25%;
 }
 .payment-title{
     margin: 0;
+}
+.payment-top{
+    margin-bottom: 20px;
+}
+.payment-middle{
+    display: flex;
+    margin-bottom: 20px;
+}
+.payment-middle-half{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 10%;
+}
+.exp-date-container{
+    display: flex;
+}
+#payment-head{
+    margin: 20px auto 0 auto;
 }
 /* Payment ends */
