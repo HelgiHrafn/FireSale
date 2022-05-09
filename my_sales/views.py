@@ -31,26 +31,22 @@ def get_item_highest_bid(id):
 def accept_bid(request, id, bid):
     item = Item.objects.get(id=id)
     bid = Bid.objects.get(id=bid)
+    print(item)
+    print(id)
+    print(bid.id)
     bid.bid_status = True
     bid.save()
-    send_email(item.name, bid.id)
+    send_email(item.item_name, bid.user_id)
 
-
-    send_mail('Tilboð samþykkt',
-              'Hello hello',
-              'kristjanm20@ru.is',
-              ['bid.bid'],
-              fail_silently=False,
-              )
-        #Do something
     return render(request, 'my_sales/sell_confirm.html')
 
 
 def send_email(name, id):
     user = User.objects.get(id=id)
+    print(user)
     send_mail('Tilboð samþykkt',
               'Hello hello',
               'kristjanm20@ru.is',
-              ['user.em'],
-              fail_silently=False,
+              ['user.email'],
+              fail_silently=True,
               )
