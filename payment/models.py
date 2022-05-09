@@ -23,3 +23,4 @@ class ContactInfo(models.Model):
     street_number = models.IntegerField()
     city = models.CharField(max_length=50)
     post_code = models.IntegerField()
+    #country = models.ForeignKey(Countries, on_delete=models.CASCADE)

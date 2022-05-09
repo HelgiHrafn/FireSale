@@ -7,11 +7,11 @@ class PaymentForm(ModelForm):
         model = Payment
         exclude = ['id', 'user', 'payment_item']
         widgets = {
-            'card_number': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'exp_month': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'exp_year': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'cvc': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'name': widgets.TextInput(attrs={'class': 'form-control'})
+            'card_number': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '16'}),
+            'exp_month': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '2'}),
+            'exp_year': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '2'}),
+            'cvc': widgets.NumberInput(attrs={'class': 'form-control', 'maxlength': '3'}),
+            'name': widgets.TextInput(attrs={'class': 'form-control', 'maxlength': '100'})
         }
         labels = {
             'card_number': 'Kortanúmer',

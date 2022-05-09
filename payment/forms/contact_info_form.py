@@ -12,7 +12,8 @@ class ContactInfoForm(ModelForm):
             'street_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'street_number': widgets.NumberInput(attrs={'class': 'form-control'}),
             'city': widgets.TextInput(attrs={'class': 'form-control'}),
-            'post_code': widgets.NumberInput(attrs={'class': 'form-control'})
+            'post_code': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'country': widgets.Select(attrs={'class': 'form-control'})
         }
         labels = {
             'first_name': 'Fornafn',
@@ -20,5 +21,6 @@ class ContactInfoForm(ModelForm):
             'street_name': 'Götuheiti',
             'street_number': 'Húsnúmer',
             'city': 'Bæjarfélag',
-            'post_code': 'Póstnúmer'
+            'post_code': 'Póstnúmer',
+            'country': 'Land'
         }

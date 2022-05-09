@@ -5,22 +5,28 @@
         <form action="{% url 'payment-payment' %}" method="post" class="form-horizontal">
         {% csrf_token %}
             <div class="payment-container">
+                <h2 id="payment-head">Kortaupplýsingar</h2>
                 <div class="cardinfo-container">
-                    <h2>Kortaupplýsingar</h2>
                     <div class="payment-top">
-                        <h3 class="payment-title">Kortanúmer</h3>
+                        <h3 class="payment-title">Kortanúmer:</h3>
                         {{ form.card_number }}
                     </div>
                     <div class="payment-middle">
-                        <h3 class="payment-title">Gildistími</h3>
-                        {{ form.exp_month }}
-                        <h3 class="payment-title">/</h3>
-                        {{ form.exp_year }}
-                        <h3 class="payment-title">Öryggisnúmer</h3>
-                        {{ form.cvc }}
+                        <div class="payment-middle-half">
+                            <h3 class="payment-title">Gildistími:</h3>
+                            <div class="exp-date-container">
+                                {{ form.exp_month }}
+                                <h3 class="payment-title">/</h3>
+                                {{ form.exp_year }}
+                            </div>
+                        </div>
+                        <div class="payment-middle-half">
+                            <h3 class="payment-title">Öryggisnúmer:</h3>
+                            {{ form.cvc }}
+                        </div>
                     </div>
                     <div class="payment-bottom">
-                        <h3 class="payment-title">Nafn korthafa</h3>
+                        <h3 class="payment-title">Nafn korthafa:</h3>
                         {{ form.name }}
                     </div>
                 </div>
