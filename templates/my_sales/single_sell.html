@@ -2,7 +2,7 @@
     <a href ="/my_sales/{{ item.id }}">
         <div class="single-my_sales-item">
         <div class="image-container">
-            <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.item_image }}" />
+            <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.itemimage_set.first.image }}" />
         </div>
         <span class="item-sell-name">Nafn: {{ item.item_name }}</span>
         <span class="item-sell-price">Ásett verð: {{ item.item_price }}</span>
