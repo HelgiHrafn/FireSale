@@ -3,7 +3,9 @@
    <h2 class="page_title">Bjóða í vöru</h2>
     <div class="offer-container">
         <div class="offer-img-container">
-            <img class="item-offer-img" src="{{ item.item_image }}" alt="item-for-sale">
+             {% for item_image in item.itemimage_set.all %}
+                <img src="{{ item_image.image }}" alt="Item image" class="item-sell-img">
+            {% endfor %}
         </div>
         <div class="item-info-container">
             <p class="item-info">Nafn: {{ item.item_name }}</p>
