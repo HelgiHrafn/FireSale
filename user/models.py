@@ -9,4 +9,6 @@ class Profile(models.Model):
     profile_image = models.CharField(max_length=9999, null=True)
     profile_bio = models.CharField(max_length=9999, null=True)
     profile_rating = models.IntegerField(null=True)
+    profile_email = models.EmailField(max_length=254, null=True)
+
 

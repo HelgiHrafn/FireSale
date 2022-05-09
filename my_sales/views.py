@@ -3,6 +3,7 @@ from firesale.models import Item
 from bid.models import Bid
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
+from user.models import Profile
 
 
 # Create your views here.
@@ -36,17 +37,15 @@ def accept_bid(request, id, bid):
     print(bid.id)
     bid.bid_status = True
     bid.save()
-    send_email(item.item_name, bid.user_id)
-
+    send_email_to_buyer(item.item_name, bid.user_id)
     return render(request, 'my_sales/sell_confirm.html')
 
 
-def send_email(name, id):
-    user = User.objects.get(id=id)
-    print(user)
-    send_mail('Tilboð samþykkt',
-              'Hello hello',
+def send_email_to_buyer(name, id):
+    profile = Profile.objects.get(user_id=id)
+    send_mail('FIRESALE: Tilboð samþykkt',
+              'Tilboð í vöru '+name+' hefur verið samþykkt. Skráðu þig inn til að ganga frá greiðslu.',
               'kristjanm20@ru.is',
-              ['user.email'],
+              [profile.profile_email],
               fail_silently=True,
               )
