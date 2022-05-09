@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from firesale.models import Item
 from bid.forms.bid_form import BidCreateForm
@@ -6,6 +7,10 @@ from bid.models import Bid
 
 # Create your views here.
 def index(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        items = list(Item.objects.filter(item_name__icontains=search_filter).values())
+        return JsonResponse({ 'data': items })
     context = {'items': Item.objects.all().order_by('item_name')}
     return render(request, 'firesale/index.html', context)
 
