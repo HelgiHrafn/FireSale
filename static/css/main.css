@@ -628,4 +628,11 @@ textarea{
     display: flex;
     margin-top: 20px;
 }
+.contact-single{
+    margin-bottom: 10px;
+}
+.contact-number-field{
+    margin-bottom: 10px;
+    width: 40%;
+}
 /* Payment ends */
