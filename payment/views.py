@@ -39,3 +39,7 @@ def contact_info(request):
     return render(request, 'payment/contact_info.html', {
         'form': form
     })
+
+
+def review(request):
+    return render(request, 'payment/review.html')
