@@ -547,7 +547,20 @@ textarea{
     height: 45%;
     display: flex;
     margin: auto;
+    flex-direction: row;
+}
+
+.item-info-right{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-info-left{
     flex-direction: column;
+    display: flex;
+    flex: 1;
 
 }
 .item-info{
@@ -561,7 +574,15 @@ textarea{
     height: 108px;
 }
 #make-offer-button{
-    align-self: flex-end;
+    align-self: auto;
+    justify-content: center;
+    width: 250px;
+    height: 125px;
+    font-size: 42px;
+    line-height: 120px;
+    text-align: center;
+    margin: auto;
+    padding: auto;
 }
 /* Payment starts */
 

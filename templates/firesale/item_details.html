@@ -8,16 +8,21 @@
             {% endfor %}
         </div>
         <div class="item-info-container">
-            <p class="item-info">Nafn: {{ item.item_name }}</p>
-            <p class="item-info">Verð: {{ item.item_price }}</p>
-            <p class="item-info">Ástand: {{ item.item_condition }}</p>
-            <p class="item-info">Lýsing: {{ item.item_description }}</p>
-            <p class="item-info">Hæsta boð: {{ bid.bid_amount }}</p>
-            {% if user.is_authenticated %}
-            <a id="make-offer-button" class="confirm_button" href="/firesale/item_bid/{{ item.id }}">Gera tilboð</a>
-            <div class="offer-input-container">
-                {% else %}
-                {% endif %}
+            <div class="item-info-left">
+                <p class="item-info">Nafn: {{ item.item_name }}</p>
+                <p class="item-info">Verð: {{ item.item_price }}</p>
+                <p class="item-info">Vöruflokkur: {{ item.item_category }}</p>
+                <p class="item-info">Ástand: {{ item.item_condition }}</p>
+                <p class="item-info">Lýsing: {{ item.item_description }}</p>
+                <p class="item-info">Hæsta boð: {{ bid.bid_amount }}</p>
+            </div>
+            <div class="item-info-right">
+                {% if user.is_authenticated %}
+                <a id="make-offer-button" class="confirm_button" href="/firesale/item_bid/{{ item.id }}">Gera tilboð</a>
+                <div class="offer-input-container">
+                    {% else %}
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

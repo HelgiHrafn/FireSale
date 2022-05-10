@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    $("#searchbar").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#search_btn").click();
+    }
+    });
     $('#search_btn').on('click', function (e) {
         e.preventDefault();
         var searchText = $('#searchbar').val(); //Sækja value i search bar
