@@ -13,7 +13,7 @@ class Condition(models.Model):
 
 
 class ItemCategory(models.Model):
-    category_name = models.CharField(max_length=255, blank=True, default="Óskilgreint")
+    category_name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.category_name
