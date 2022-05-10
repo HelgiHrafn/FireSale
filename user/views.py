@@ -4,6 +4,7 @@ from user.form.profile_form import ProfileForm
 from user.models import Profile
 from firesale.forms.item_form import ItemCreateForm, ItemImageForm
 from firesale.models import Item, ItemImage
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -14,6 +15,9 @@ def register(request):
         print(form.errors)
         if form.is_valid():
                 form.save()
+                user_id = User.objects.get(username=form.cleaned_data['username'])
+                profile =Profile(user_id=user_id.id)
+                profile.save()
                 return redirect('login')
         else:
             return render(request, 'user/register.html', {
@@ -42,11 +46,6 @@ def profile(request):
 
 
 def index(request):
-    profile = Profile.objects.filter(user=request.user)
-    if not profile:
-        user_profile = Profile()
-        user_profile.user_id = request.user.id
-        user_profile.save()
     return render(request, 'user/profile.html', {'User': request.user, 'Image': Profile.objects.get(user=request.user.id)})
 
 

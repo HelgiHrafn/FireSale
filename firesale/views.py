@@ -16,7 +16,6 @@ def index(request):
             'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(item_name__icontains=search_filter)]
         return JsonResponse({'data': items})
-    # We use exclude to take away items that have an accepted bid so that its no longer for sale
     context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')}
     return render(request, 'firesale/index.html', context)
 
