@@ -351,6 +351,8 @@ textarea{
 }
 .edit_form_control{
     height: 200px;
+    padding-bottom: 170px;
+
 }
 
 .body-container{
