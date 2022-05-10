@@ -310,6 +310,27 @@ textarea{
 .edit_form_control{
     height: 200px;
 }
+
+.body-container{
+    min-height: 100%;
+}
+
+.container{
+    min-height: 100%;
+    position: relative;
+}
+#content-wrap{
+    padding-bottom: 100px;
+}
+.footer-bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #b2b2b2;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 /* OLD POST SALE CODE
 .post_sale_description {
     flex-basis: 20%;
