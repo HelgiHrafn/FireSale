@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from user.form.profile_form import ProfileForm
 from user.models import Profile
 from firesale.forms.item_form import ItemCreateForm, ItemImageForm
@@ -11,10 +11,15 @@ def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
         print(form.data)
+        print(form.errors)
         if form.is_valid():
-            print('check_validity')
-            form = form.save()
-            return redirect('login')
+                form.save()
+                return redirect('login')
+        else:
+            return render(request, 'user/register.html', {
+                'form': UserCreationForm(),
+                'message': form.errors
+            })
 
     return render(request, 'user/register.html', {
             'form': UserCreationForm()
@@ -70,6 +75,7 @@ def post_sale_images(request):
             user_id = request.user.id
             item = Item.objects.filter(item_seller_id=user_id).latest('id')
             counter = ItemImage.objects.filter(item_id=item.id).count()
+            # We only want user to be able to post max 3 images
             if counter == 2:
                 return render(request, 'user/post_sale_images.html', {
                     'message': 'Hámark fjölda mynda náð'

@@ -16,11 +16,13 @@ def index(request):
             'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(item_name__icontains=search_filter)]
         return JsonResponse({'data': items})
-    context = {'items': Item.objects.all().order_by('item_name')}
+    # We use exclude to take away items that have an accepted bid so that its no longer for sale
+    context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')}
     return render(request, 'firesale/index.html', context)
 
 
 def get_item_by_id(request, id):
+    # Get highest bid for item
     highest_bid = get_item_highest_bid(id)
     return render(request, 'firesale/item_details.html', {
         'item': get_object_or_404(Item, pk=id),
@@ -49,6 +51,7 @@ def bid_item_by_id(request, id):
             form.save()
             return redirect('firesale-index')
     else:
+        # In order to create a bid we need to know what item is being bidded on, hence request.path
         bid_item = request.path
         bid_item = bid_item.split('/')
         bid_item = int(bid_item[-2])
