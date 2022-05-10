@@ -80,15 +80,14 @@ def post_sale_images(request):
             image = form.cleaned_data.get('image')
             user_id = request.user.id
             item = Item.objects.filter(item_seller_id=user_id).latest('id')
+            form = ItemImage(image=image, item_id=item.id)
+            form.save()
             counter = ItemImage.objects.filter(item_id=item.id).count()
-            # We only want user to be able to post max 3 images
-            if counter == 2:
+            if counter == 3:
                 return render(request, 'user/post_sale_images.html', {
                     'message': 'Hámark fjölda mynda náð'
                 })
             else:
-                form = ItemImage(image=image, item_id=item.id)
-                form.save()
                 form = ItemImageForm()
                 return render(request, 'user/post_sale_images.html', {
                     'form': form,
