@@ -705,7 +705,7 @@ textarea{
 .exp-date-container{
     display: flex;
 }
-#payment-head{
+.payment-head{
     margin: 20px auto 0 auto;
 }
 .contact-right{
@@ -743,7 +743,7 @@ textarea{
     margin: auto;
     border-radius: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 500px;
     justify-content: flex-start;
     padding: 20px;
