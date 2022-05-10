@@ -122,6 +122,7 @@ textarea{
     display: flex;
 }
 #login_box{
+    display: flex;
     background-color: white;
     padding: 15px;
     max-width: 30%;
@@ -129,7 +130,37 @@ textarea{
     border-radius: 5px;
     flex-wrap: wrap-reverse;
 }
+
+.form-horizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.submit-button-area{
+    margin: 5px;
+    justify-content: center;
+}
+.fieldWrapper{
+    justify-content: center;
+    display: flex;
+}
+
+.form-control-login{
+    display: flex;
+    justify-content: center;
+    width: 325px;
+}
+
+.login-button{
+    display: flex;
+    width: 150px;
+    justify-content: center;
+}
 #login_img{
+    order: 1;
     margin:auto;
     display: block;
     border-radius: 50%;
@@ -328,6 +359,8 @@ textarea{
 }
 .edit_form_control{
     height: 200px;
+    padding-bottom: 170px;
+
 }
 
 .body-container{
