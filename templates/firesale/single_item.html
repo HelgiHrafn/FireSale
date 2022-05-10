@@ -4,8 +4,8 @@
         <span class="image-container">
             <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.itemimage_set.first.image|default:"https://media.istockphoto.com/vectors/fire-flame-icon-isolated-bonfire-sign-emoticon-flame-symbol-isolated-vector-id1137962021?k=20&m=1137962021&s=612x612&w=0&h=Ub026rl_amXtLNPbMMJRQHDcJ93G_v5d23C55OUtqXk=" }}"/>
         </span>
-        <span class="item-sell-name">{{ item.item_name }}</span>
-        <span class="item-sell-price">{{ item.item_price }}</span>
+        <span class="item-sell-name">Vara: {{ item.item_name }}</span>
+        <span class="item-sell-price">Ásett verð: {{ item.item_price }}</span>
         </button>
     </a>
 </div>
