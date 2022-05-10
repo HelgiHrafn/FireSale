@@ -2,10 +2,10 @@
 {% block content %}
        <h2 class="page_title">Bjóða í vöru</h2>
     <div class="offer-container">
-    <form action="{% url 'item-bid' item.bid_item_id %}" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Staðfesta tilboð" class="confirm_button" id="post_sale_confirm_button">
-            </form>
-              </div>
+        <form action="{% url 'item-bid' item.bid_item_id %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Staðfesta tilboð" class="confirm_button" id="post_sale_confirm_button">
+        </form>
+    </div>
 {% endblock %}

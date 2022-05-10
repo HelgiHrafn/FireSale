@@ -3,7 +3,7 @@
     <h1 class="page_title">Prófíllinn minn</h1>
     <div class="profile-container">
         <div class="profile-image-and-bio">
-            <img class="profile-image" src="{{ Image.profile_image }}" alt="your profile picture">
+            <img class="profile-image" onerror="this.src='/static/images/silhouette-image-4.png';this.onerror='';" src="{{ Image.profile_image }}" alt="your profile picture">
         <div class="profile-info">
             <h1 class="user-name">{{ User.username }}</h1>
             <div class="bio-container">
