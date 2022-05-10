@@ -62,7 +62,7 @@ textarea{
 }
 #searchbar{
     background-color: white;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     border-style: solid;
     border-color: darkgray;
     border-width: 1px;
@@ -75,7 +75,15 @@ textarea{
     display: flex;
 }
 .bi-search{
-    margin: auto 10px auto;
+    margin: auto;
+}
+.btn_default{
+    border-style: solid;
+    border-color: darkgray;
+    border-radius: 20px 0 0 20px;
+    max-height: 34px;
+    max-width: 4%;
+    margin-right: -1px;
 }
 .page_title{
     color: #F26627;
