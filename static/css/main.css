@@ -248,7 +248,7 @@ textarea{
 
 }
 
-.profile-button {
+#profile-button {
     background-color: #325D79;
     background-size: 300px;
     color: #FFFFFF;
@@ -257,14 +257,21 @@ textarea{
     font-size: 28px;
     align-items: center;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 2px;
     margin-left: -20px;
     margin-right: 35px;
-    margin-top: 27.5px;
+    margin-top: 2px;
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
-    border-radius: 5px;
+    border-radius: 50%;
 
+}
+.navbar-profile-image{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: inline-block;
+    object-fit: cover;
 }
 
 #navbar_post_sale_button {
