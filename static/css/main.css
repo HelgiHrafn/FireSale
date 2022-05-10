@@ -367,15 +367,8 @@ textarea{
     min-height: 100%;
 }
 
-.container{
-    min-height: 100%;
-    position: relative;
-}
-#content-wrap{
-    padding-bottom: 100px;
-}
+
 .footer-bar{
-    position: absolute;
     bottom: 0;
     width: 100%;
     color: #b2b2b2;
@@ -572,7 +565,7 @@ textarea{
 .edit-profile-container{
     background-color: white;
     border-radius: 5px;
-    height: 300px;
+    height: 400px;
     margin: 0 30% 0 30%;
     display: flex;
     flex-wrap: wrap;
@@ -593,7 +586,13 @@ textarea{
     margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
+}
 
+.offer-price-container{
+    justify-content: center;
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 50px;
 }
 .offer-img-container{
     width: 95%;

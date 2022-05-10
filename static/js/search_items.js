@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     $("#searchbar").keyup(function(event) {
     if (event.keyCode === 13) {
@@ -12,11 +13,13 @@ $(document).ready(function() {
             type: 'GET',
             success: function(resp) { // Populate-a gögnin hér
                 var newHtml = resp.data.map(d => {
+
                     return `<div class="each item">
                                 <a href="/firesale/${d.id}">
                                     <button class = button-single-item>
                                     <span class="image-container">
-                                    <img class="item-sell-img" src="${d.firstImage}" alt="Image of item found via search query"/>
+                                    
+                                    <img class="backup_picure item-sell-img" onerror="this.src='/static/images/silhouette-image-4.png';this.onerror='';" src="{{ Image.profile_image }}"src="${d.firstImage}" onerror="" alt="Image of item found via search query"/>
                                     </span>
                                     <span class="item-sell-name">${d.name}</span>
                                     <span class="item-sell-price">${d.price}</span>
@@ -34,3 +37,4 @@ $(document).ready(function() {
         })
     });
 });
+
