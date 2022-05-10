@@ -13,7 +13,7 @@ class Condition(models.Model):
 
 
 class ItemCategory(models.Model):
-    category_name = models.CharField(max_length=255, blank=True)
+    category_name = models.CharField(max_length=255, blank=True, default="Óskilgreint")
 
     def __str__(self):
         return self.category_name
@@ -22,7 +22,7 @@ class ItemCategory(models.Model):
 class Item(models.Model):
     item_name = models.CharField(max_length=50)
     item_price = models.IntegerField()
-    # item_category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
+    item_category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
     item_condition = models.ForeignKey(Condition, on_delete=models.CASCADE)
     item_description = models.CharField(max_length=255, blank=True)
     item_seller = models.ForeignKey(User, on_delete=models.CASCADE)

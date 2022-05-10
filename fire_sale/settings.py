@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'firesale-db',
         'USER': 'firesale-db-user',
         'PASSWORD': 'Abc.12345',
-        'HOST': '35.242.138.167',
+        'HOST': '34.142.96.185',
         'PORT': '5432',
     }
 }
