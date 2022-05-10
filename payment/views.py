@@ -16,8 +16,7 @@ def payment(request):
             pay_info = form.save(commit=False)
             pay_info.user = request.user
             # pay_info.save() # ATHHHHHHHHHHHH
-            print("payment success")  # ATHHHHHHHHHHHHH
-            return redirect('my_offers-index')
+            return redirect('payment-review')
     else:
         form = PaymentForm()
     return render(request, 'payment/payment.html', {
@@ -32,10 +31,13 @@ def contact_info(request):
             info = form.save(commit=False)
             info.user = request.user
             # info.save() # ATHHHHHHHHHHHHHHHHHHhh
-            print("contact info success")  # ATHHHHHHHHHHHHH
             return redirect('payment-payment')
     else:
         form = ContactInfoForm()
     return render(request, 'payment/contact_info.html', {
         'form': form
     })
+
+
+def review(request):
+    return render(request, 'payment/review.html')

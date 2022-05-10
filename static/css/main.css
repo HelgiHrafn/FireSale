@@ -199,6 +199,28 @@ textarea{
     margin: 5px;
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
 }
+
+.container{
+
+}
+.order_by_btn:first-child{
+    margin-left: 65px;
+}
+.order_by_btn{
+    background-color: #325D79;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    border-width: 0;
+    margin: 5px;
+    filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
+}
+
+.order_by_btn:active{
+    background-color: white;
+    color: #325D79;
+}
 .input-box{
     width: 100%;
 }
@@ -367,15 +389,8 @@ textarea{
     min-height: 100%;
 }
 
-.container{
-    min-height: 100%;
-    position: relative;
-}
-#content-wrap{
-    padding-bottom: 100px;
-}
+
 .footer-bar{
-    position: absolute;
     bottom: 0;
     width: 100%;
     color: #b2b2b2;
@@ -572,7 +587,7 @@ textarea{
 .edit-profile-container{
     background-color: white;
     border-radius: 5px;
-    height: 300px;
+    height: 400px;
     margin: 0 30% 0 30%;
     display: flex;
     flex-wrap: wrap;
@@ -593,7 +608,13 @@ textarea{
     margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
+}
 
+.offer-price-container{
+    justify-content: center;
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 50px;
 }
 .offer-img-container{
     width: 95%;
@@ -706,7 +727,7 @@ textarea{
 .exp-date-container{
     display: flex;
 }
-#payment-head{
+.payment-head{
     margin: 20px auto 0 auto;
 }
 .contact-right{
@@ -739,6 +760,16 @@ textarea{
     margin-bottom: 10px;
     width: 40%;
 }
+.review-container{
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: flex-start;
+    padding: 20px;
+}
 /* Payment ends */
 
 /* Star ratings start */
@@ -760,4 +791,4 @@ textarea{
   mask: repeat left center/var(--starsize) var(--symbol);
   -webkit-mask: repeat left center/var(--starsize) var(--symbol);
 }
-
+/* Star ratings end */
