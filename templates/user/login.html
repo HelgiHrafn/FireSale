@@ -6,8 +6,23 @@
         <img id="login_img" src="/static/images/logo_temp.png" alt="placeholder image">
         <form method="post" class="form-horizontal">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="confirm_button" value="Login"/>
+        {% if form.errors %}
+<p>Notandanafn og lykilorð passa ekki. Vinsamlegast reyndu aftur.</p>
+{% endif %}
+
+<div class="fieldWrapper">
+        <label id="loginLabel" for="{{ form.username.id_for_label }}">Notendanafn:</label>
+{{ form.username }}
+</div>
+
+
+ <div class="fieldWrapper">
+        <label id="loginLabel" for="{{ form.password.id_for_label }}">Lykilorð:</label>
+ {{ form.password }}
+ </div>
+
+
+        <input type="submit" class="confirm_button" value="Skrá inn"/>
         </form>
     </div>
 {% endblock %}

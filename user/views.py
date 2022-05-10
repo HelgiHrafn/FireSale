@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from user.form.profile_form import ProfileForm
 from user.models import Profile
 from firesale.forms.item_form import ItemCreateForm, ItemImageForm
