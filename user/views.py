@@ -42,6 +42,11 @@ def profile(request):
 
 
 def index(request):
+    profile = Profile.objects.filter(user=request.user)
+    if not profile:
+        user_profile = Profile()
+        user_profile.user_id = request.user.id
+        user_profile.save()
     return render(request, 'user/profile.html', {'User': request.user, 'Image': Profile.objects.get(user=request.user.id)})
 
 
@@ -51,9 +56,10 @@ def post_sale(request):
         if form.is_valid():
             name = form.cleaned_data.get("item_name")
             price = form.cleaned_data.get("item_price")
+            category = form.cleaned_data.get("item_category")
             condition = form.cleaned_data.get("item_condition")
             description = form.cleaned_data.get("item_description")
-            item = Item(item_name=name, item_price=price, item_condition=condition,
+            item = Item(item_name=name, item_price=price, item_category=category, item_condition=condition,
                         item_description=description, item_seller=request.user)
             item.save()
             return render(request, 'user/post_sale_img_option.html')

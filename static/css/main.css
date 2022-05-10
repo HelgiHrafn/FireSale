@@ -283,7 +283,7 @@ textarea{
     padding-bottom: 2%;
     margin-left: 10%;
 }
-#post_sale_form_item_image, #post_sale_form_item_condition, #post_sale_form_item_price{
+#post_sale_form_item_image,#post_sale_form_item_category, #post_sale_form_item_condition, #post_sale_form_item_price{
     padding-bottom:2%;
     max-width: 60%;
 }
