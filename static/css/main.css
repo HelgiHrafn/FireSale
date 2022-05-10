@@ -727,7 +727,7 @@ textarea{
 .exp-date-container{
     display: flex;
 }
-#payment-head{
+.payment-head{
     margin: 20px auto 0 auto;
 }
 .contact-right{
@@ -760,6 +760,16 @@ textarea{
     margin-bottom: 10px;
     width: 40%;
 }
+.review-container{
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: flex-start;
+    padding: 20px;
+}
 /* Payment ends */
 
 /* Star ratings start */
@@ -781,4 +791,4 @@ textarea{
   mask: repeat left center/var(--starsize) var(--symbol);
   -webkit-mask: repeat left center/var(--starsize) var(--symbol);
 }
-
+/* Star ratings end */
