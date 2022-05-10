@@ -199,6 +199,28 @@ textarea{
     margin: 5px;
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
 }
+
+.container{
+
+}
+.order_by_btn:first-child{
+    margin-left: 65px;
+}
+.order_by_btn{
+    background-color: #325D79;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    border-width: 0;
+    margin: 5px;
+    filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
+}
+
+.order_by_btn:active{
+    background-color: white;
+    color: #325D79;
+}
 .input-box{
     width: 100%;
 }
