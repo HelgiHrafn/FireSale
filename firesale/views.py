@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from firesale.models import Item
 from bid.forms.bid_form import BidCreateForm
 from bid.models import Bid
-
+from user.models import Profile
 
 # Create your views here.
 def index(request):
