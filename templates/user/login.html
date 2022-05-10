@@ -7,21 +7,20 @@
         <form method="post" class="form-horizontal">
         {% csrf_token %}
         {% if form.errors %}
-<p>Notandanafn og lykilorð passa ekki. Vinsamlegast reyndu aftur.</p>
-{% endif %}
-
-<div class="fieldWrapper">
-        <label id="loginLabel" for="{{ form.username.id_for_label }}">Notendanafn:</label>
-{{ form.username }}
-</div>
-
-
- <div class="fieldWrapper">
-        <label id="loginLabel" for="{{ form.password.id_for_label }}">Lykilorð:</label>
- {{ form.password }}
- </div>
-
-
+        <p>Notandanafn og lykilorð passa ekki. Vinsamlegast reyndu aftur.</p>
+        {% endif %}
+            <div class="fieldWrapper">
+                <label id="loginLabel" for="{{ form.username.id_for_label }}">Notendanafn:</label>
+            </div>
+                <div class="form-control-login">
+                {{ form.username }}
+                </div>
+            <div class="fieldWrapper">
+                <label id="loginLabel" for="{{ form.password.id_for_label }}">Lykilorð:</label>
+             </div>
+                <div class="form-control-login">
+                {{ form.password }}
+                </div>
         <input type="submit" class="confirm_button" value="Skrá inn"/>
         </form>
     </div>

@@ -163,6 +163,10 @@ textarea{
     border: #A6A6A6;
     border-radius: 5px;
 }
+.form-control-login{
+    border: #A6A6A6;
+    border-radius: 5px;
+}
 #register_image{
     border-radius: 50%;
     max-height: 200px;
