@@ -42,6 +42,11 @@ def profile(request):
 
 
 def index(request):
+    profile = Profile.objects.filter(user=request.user)
+    if not profile:
+        user_profile = Profile()
+        user_profile.user_id = request.user.id
+        user_profile.save()
     return render(request, 'user/profile.html', {'User': request.user, 'Image': Profile.objects.get(user=request.user.id)})
 
 
