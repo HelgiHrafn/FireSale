@@ -9,6 +9,10 @@
             <div class="bio-container">
                 <p class="user-bio">{{ Image.profile_bio }}</p>
             </div>
+            <label class="rating-label">
+                <strong>Rating</strong>
+                <input class="rating" max="5" oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)" step="0.5" type="range"  value="1">
+            </label>
         </div>
         </div>
         {% if user.is_authenticated %}
