@@ -570,10 +570,10 @@ textarea{
 #make-offer-button{
     align-self: auto;
     justify-content: center;
-    width: 250px;
-    height: 125px;
-    font-size: 42px;
-    line-height: 120px;
+    width: 150px;
+    height: 75px;
+    font-size: 24px;
+    line-height: 65px;
     text-align: center;
     margin: auto;
     padding: auto;
