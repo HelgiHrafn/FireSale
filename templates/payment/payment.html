@@ -1,8 +1,9 @@
 {%  extends 'base.html' %}
+<a href ="/payment/payment/{{ bid.id }}">
 {% block content %}
     <h2 class="page_title">Greiðsla</h2>
 
-        <form action="{% url 'payment-payment' %}" method="post" class="form-horizontal">
+        <form action="{% url 'payment-payment' item.id  %}" method="post" class="form-horizontal">
         {% csrf_token %}
             <div class="payment-container">
                 <h2 class="payment-head">Kortaupplýsingar</h2>
@@ -38,3 +39,4 @@
         </form>
 
 {% endblock %}
+</a>

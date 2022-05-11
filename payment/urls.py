@@ -3,7 +3,8 @@ from . import views
 
 urlpatterns = [
     # http://localhost:8000/my_offers
-    path('cardinfo', views.payment, name="payment-payment"),
-    path('contact_info', views.contact_info, name="payment-contact_info"),
-    path('review', views.review, name="payment-review")
+    path('contact_info/<int:bid_id>', views.contact_info, name="payment-contact_info"),
+    path('cardinfo/<int:item_id>', views.payment, name="payment-payment"),
+    path('review/<int:item_id>', views.review, name="payment-review"),
+    path('payment_processed/<int:item_id>', views.payment_processed, name="payment-processed")
 ]
