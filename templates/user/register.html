@@ -7,7 +7,15 @@
             <img id="register_image" src="/static/images/silhouette-image-4.png" alt="placeholder image">
             </div>
             {% csrf_token %}
-            {{ form }}
+        <div class="form-control-login">
+           <label id="LoginLabel">Notendanafn: {{ form.username }}</label>
+       </div>
+        <div class="form-control-login">
+             <label id="LoginLabel">Lykilorð: {{ form.password1 }}</label>
+        </div>
+        <div class="form-control-login">
+            <label id="LoginLabel">Lykilorð endurtekið: {{ form.password2 }}</label>
+        </div>
                {{ message }}
             <input type="submit" value="Stofna aðgang" class="confirm_button" style="clear:both; margin: 10px 0">
         </form>
