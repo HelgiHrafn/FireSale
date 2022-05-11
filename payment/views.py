@@ -32,9 +32,11 @@ def payment(request, item_id):
     else:
         form = PaymentForm(instance=payment_object_old)
         item = Item.objects.get(id=item_id)
+        bid = Bid.objects.filter(bid_item_id=item.id).get(bid_status=True)
     return render(request, 'payment/payment.html', {
         'form': form,
-        'item': item
+        'item': item,
+        'bid': bid
     })
 
 

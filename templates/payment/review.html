@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="payment-buttons">
-            <button class="secondary_button">Til baka</button>
+             <a class="secondary_button" href="{% url 'payment-payment' item_id.id %}">Tilbaka</a>
             <a class="confirm_button" href="{% url 'payment-processed' item_id.id %}">Samþykkja tilboð</a>
 
         </div>
