@@ -5,7 +5,7 @@
         <div class="profile-image-and-bio">
             <img class="profile-image" src="{{ Image.profile_image|default:"https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=" }}" alt="your profile picture"/>
         <div class="profile-info">
-            <h1 class="user-name">{{ User.username }}</h1>
+            <h1 class="user-name">{{ Image.profile_name }}</h1>
             <div class="rating">
                 <p id="rating-number" class="rating-number">{{ Image.profile_rating }}</p>
                 <div class="stars" id="stars">
