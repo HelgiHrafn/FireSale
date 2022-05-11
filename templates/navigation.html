@@ -10,22 +10,22 @@
       <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
             <ul class="nav navbar-nav navbar-right">
-            <li><a id = "navbar_post_sale_button" class = "navbar-button" href="{% url 'post_sale' %}">Selja nýjan hlut</a></li> <li><a class = "navbar-button" href="{% url 'my-offers-index' %}">Mín tilboð</a></li>
-            <li><a class = "navbar-button" href="{% url 'my_sales-index' %}">Mínar sölur</a></li>
-            <li><a class = "navbar-button" href="{% url 'logout' %}">Skrá út</a></li>
-            <li>
-                <a id="profile-button" href="{% url 'profile' %}">
-                    <img class="navbar-profile-image" src="{{ profile_image.profile_image|default:'/static/images/silhouette-image-4.png'}}" alt="user's profile image">
-                    <div class="navbar-profile-info">
-                        <h2 class="navbar-profile-name">{{ profile_image.profile_name }}</h2>
-                        <div class="rating">
-                            <p id="rating-number" class="rating-number">{{ profile_image.profile_rating }}</p>
-                            <div class="stars" id="stars">
+                <li><a id = "navbar_post_sale_button" class = "navbar-button" href="{% url 'post_sale' %}">Selja nýjan hlut</a></li> <li><a class = "navbar-button" href="{% url 'my-offers-index' %}">Mín tilboð</a></li>
+                <li><a class = "navbar-button" href="{% url 'my_sales-index' %}">Mínar sölur</a></li>
+                <li><a class = "navbar-button" href="{% url 'logout' %}">Skrá út</a></li>
+                <li>
+                    <a id="profile-button" href="{% url 'profile' %}">
+                        <img class="navbar-profile-image" src="{{ profile_image.profile_image|default:'/static/images/silhouette-image-4.png'}}" alt="user's profile image">
+                        <div class="navbar-profile-info">
+                            <h2 class="navbar-profile-name">{{ profile_image.profile_name }}</h2>
+                            <div class="rating">
+                                <p id="rating-number" class="rating-number">{{ profile_image.profile_rating }}</p>
+                                <div class="stars" id="stars">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </li>
+                    </a>
+                </li>
             </ul>
         {% else %}
             <li><a class = "navbar-button" href="{% url 'register' %}">Nýskráning</a></li>
