@@ -774,4 +774,23 @@ textarea{
 
 /* Star ratings start */
 
+.checked {
+    color: goldenrod;
+}
+.rating{
+    background-color: lightgrey;
+    display: flex;
+    width: 130px;
+    border-radius: 20px;
+}
+.stars{
+    width: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.rating-number{
+    margin: auto;
+    font-size: 20px;
+}
 /* Star ratings end */

@@ -9,6 +9,12 @@
             <div class="bio-container">
                 <p class="user-bio">{{ Image.profile_bio }}</p>
             </div>
+            <div class="rating">
+                <p id="rating-number" class="rating-number"></p>
+                <div class="stars" id="stars">
+                </div>
+            </div>
+        </div>
         </div>
         {% if user.is_authenticated %}
             <div class="profile-buttons">
