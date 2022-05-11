@@ -9,3 +9,4 @@ class Bid(models.Model):
     bid_amount = models.IntegerField()
     bid_item = models.ForeignKey(Item, on_delete=models.CASCADE)
     bid_status = models.BooleanField(default=False)
+    bid_paid = models.BooleanField(default=False)

@@ -1,12 +1,18 @@
 <div class="each item">
-    <a href ="/my_sales/{{ item.id }}">
         <div class="single-my_sales-item">
         <div class="image-container">
-            <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.itemimage_set.first.image|default:"https://media.istockphoto.com/vectors/fire-flame-icon-isolated-bonfire-sign-emoticon-flame-symbol-isolated-vector-id1137962021?k=20&m=1137962021&s=612x612&w=0&h=Ub026rl_amXtLNPbMMJRQHDcJ93G_v5d23C55OUtqXk=" }}" />
+           {% for i in items %}
+            {% if i.id == bid.bid_item_id %}
+                <img class="item-sell-img" alt="mynd af söluvöru" src="{{ i.itemimage_set.first.image|default:"https://media.istockphoto.com/vectors/fire-flame-icon-isolated-bonfire-sign-emoticon-flame-symbol-isolated-vector-id1137962021?k=20&m=1137962021&s=612x612&w=0&h=Ub026rl_amXtLNPbMMJRQHDcJ93G_v5d23C55OUtqXk=" }}" />
         </div>
-        <span class="item-sell-name">Nafn: {{ item.id }}</span>
-        <span class="item-sell-price">Ásett verð: {{ item.bid_amount }}</span>
-            <button class="confirm_button">Skoða sölu</button>
+        <span class="item-sell-name">Nafn: {{ i.item_name }}</span>
+
+        <span class="item-sell-price">Verð: {{ bid.bid_amount }}</span>
+            {% if bid.bid_status is True %}
+                <a class="confirm_button" href="{% url 'payment-contact_info' bid.id %}">Ganga frá greiðslu</a>
+            {% else %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
         </div>
-    </a>
 </div>

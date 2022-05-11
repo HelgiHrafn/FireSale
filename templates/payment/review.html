@@ -5,29 +5,26 @@
         <h2 class="payment-head">Yfirferð</h2>
         <div class="contact-rl">
             <div class="contact-left">
-                <p>contact info</p>
-                <p>contact info</p>
-                <p>contact info</p>
-                <p>contact info</p>
-                <p>contact info</p>
-                <p>contact info</p>
-                <p>contact info</p>
-                <p>contact info</p>
+                <p>Fornafn: {{ contact.first_name }}</p>
+                <p>Eftirnafn: {{ contact.last_name }}</p>
+                <p>Gata: {{ contact.street_name }}</p>
+                <p>Nr: {{ contact.street_number }}</p>
+                <p>Póstnúmer: {{ contact.post_code }}</p>
+                <p>Borg: {{ contact.city }}</p>
+                <p>Land: {{ contact.city }}</p>
             </div>
             <div class="contact-right">
-                <p>card info</p>
-                <p>card info</p>
-                <p>card info</p>
-                <p>card info</p>
-                <p>card info</p>
-                <p>card info</p>
-                <p>card info</p>
-                <p>card info</p>
+                <p>Nafn korthafa: {{ payment.name }}</p>
+                <p>Kortanúmer: {{ payment.card_number }}</p>
+                <p>CVC: {{ payment.cvc }}</p>
+                <p>Gildistími/mán: {{ payment.exp_month }}</p>
+                <p>Gildistími/ár: {{ payment.exp_year }}</p>
             </div>
         </div>
         <div class="payment-buttons">
             <button class="secondary_button">Til baka</button>
-            <input type="submit" class="confirm_button" value="Staðfesta"/>
+            <a class="confirm_button" href="{% url 'payment-processed' item_id.id %}">Samþykkja tilboð</a>
+
         </div>
     </div>
 {% endblock %}
