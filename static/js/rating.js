@@ -1,8 +1,4 @@
 function load_stars(avg_rating){
-    console.log(1)
-    const pTag = document.getElementById("rating-number")
-    const rating_text = document.createTextNode(avg_rating.toString())
-    pTag.appendChild(rating_text)
 
     const rating_rounded = Math.round(avg_rating)
 
@@ -21,4 +17,7 @@ function load_stars(avg_rating){
         stars.appendChild(star)
     }
 }
-load_stars(4.4)
+
+const rating = document.getElementById("rating-number").innerHTML
+
+load_stars(rating)

@@ -563,12 +563,18 @@ textarea{
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    height: 200px;
+    height: 100px;
     width: 350px;
     padding: 5px 10px 5px 10px;
+    margin-top: 10px;
 }
 .user-bio{
     text-align: justify;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
 }
 
 .profile-buttons{
@@ -778,7 +784,7 @@ textarea{
     color: goldenrod;
 }
 .rating{
-    background-color: lightgrey;
+    background-color: #98D7D1;
     display: flex;
     width: 130px;
     border-radius: 20px;
@@ -792,5 +798,6 @@ textarea{
 .rating-number{
     margin: auto;
     font-size: 20px;
+    color: white;
 }
 /* Star ratings end */
