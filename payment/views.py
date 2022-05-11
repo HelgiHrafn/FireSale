@@ -72,12 +72,15 @@ def review(request, item_id):
     contact_review = ContactInfo.objects.get(payment_item_id=item_id)
     payment_review = Payment.objects.get(payment_item_id=item_id)
     item = Item.objects.get(id=item_id)
+    bid = Bid.objects.filter(bid_status=True).get(bid_item_id=item.id)
     return render(request, 'payment/review.html', {
         'contact': contact_review,
         'payment': payment_review,
-        'item_id': item
+        'item_id': item,
+        'bid': bid
 
     })
+
 
 def payment_processed(request, item_id):
     item = Item.objects.get(id=item_id)
