@@ -285,25 +285,31 @@ textarea{
     font-style: normal;
     font-weight: 100;
     font-size: 28px;
+    display: flex;
     align-items: center;
     text-align: center;
     padding: 2px;
-    margin-left: -20px;
-    margin-right: 35px;
-    margin-top: 2px;
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
-    border-radius: 50%;
-
+    border-radius: 5px;
+    margin: 12px 35px auto -20px;
 }
 .navbar-profile-image{
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     overflow: hidden;
     display: inline-block;
     object-fit: cover;
+    margin: 5px;
 }
-
+.navbar-profile-info{
+    display: flex;
+    flex-direction: column;
+}
+.navbar-profile-name{
+    margin: auto auto 5px 0;
+    max-width: 180px;
+}
 #navbar_post_sale_button {
     padding-left: 20px;
     text-align: center;
@@ -786,17 +792,19 @@ textarea{
 .rating{
     background-color: #98D7D1;
     display: flex;
-    width: 130px;
-    border-radius: 20px;
+    width: 180px;
+    border-radius: 5px;
+    height: 30px;
+    margin-right: 5px;
 }
 .stars{
-    width: 80px;
+
     display: flex;
     justify-content: space-evenly;
-    margin: auto;
+    margin: auto auto auto 0;
 }
 .rating-number{
-    margin: auto;
+    margin: auto 5px auto auto;
     font-size: 20px;
     color: white;
 }
