@@ -25,9 +25,11 @@ def index(request):
 def get_item_by_id(request, id):
     # Get highest bid for item
     highest_bid = get_item_highest_bid(id)
+    items = Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')
     return render(request, 'firesale/item_details.html', {
         'item': get_object_or_404(Item, pk=id),
-        'bid': highest_bid
+        'bid': highest_bid,
+        'items': items
     })
 
 
@@ -59,6 +61,7 @@ def bid_item_by_id(request, id):
         bid_item = int(bid_item[-2])
         item = Bid(bid_item_id=bid_item)
         form = BidCreateForm()
+
     return render(request, 'firesale/item_bid.html', {
         'item': item,
         'form': form})
