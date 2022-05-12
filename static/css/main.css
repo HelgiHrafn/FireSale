@@ -778,3 +778,6 @@ textarea{
     justify-content: center;
     height: 45px;
 }
+#id_country{
+    max-width: 100%;
+}
