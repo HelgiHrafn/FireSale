@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from firesale.models import Item
+from firesale.models import Item, ItemCategory
 from bid.forms.bid_form import BidCreateForm
 from bid.models import Bid
 from user.models import Profile
@@ -11,7 +11,7 @@ from user.models import Profile
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        items = [{
+        items = [ {
             'id': x.id,
             'name': x.item_name,
             'price': x.item_price,

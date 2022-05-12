@@ -1,16 +1,11 @@
 {%  extends 'base.html' %}
 {% block content %}
     {%  include 'searchbar.html' %}
-    <div class="order_by">
-    <button class="order_by_btn">Verð: Ódýrast fyrst</button>
-    <button class="order_by_btn">Verð: Dýrast fyrst</button>
-    <button class="order_by_btn">Stafrófsröð: A-Z</button>
-    <button class="order_by_btn">Stafrófsröð: Z-A</button>
-    </div>
+    {%  include 'firesale/order_by.html' %}
     <div class="button-sell-all-items">
-    {% for item in items %}
-        {% include 'firesale/single_item.html' with item=item  %}
-    {% endfor %}
+        {% for item in items %}
+            {% include 'firesale/single_item.html' with item=item  %}
+        {% endfor %}
     </div>
 {% endblock %}
 
