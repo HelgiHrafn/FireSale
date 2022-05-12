@@ -11,7 +11,7 @@ def user_rating(request):
     try:
         orders = OrderInfo.objects.get(seller_id=user_id)
     except:
-        orders = None
+        orders =None
     if orders:
         stars_average = orders.rating.aggregate()
         print("do we get here")
