@@ -20,21 +20,17 @@ def payment(request, item_id):
     bid = Bid.objects.filter(bid_item_id=item.id).get(bid_status=True)
     if request.method == 'POST':
         form = PaymentForm(data=request.POST)
-        print("1")
         if form.is_valid():
-            print("2")
             payment_object = form.save(commit=False)
             user_id = request.user.id
             payment_object.user_id = user_id
             payment_object.payment_item_id = item_id
             if not payment_object_old:
                 payment_object.save()
-                print("3")
             else:
                 payment_object.id = payment_object_old.id
                 payment_object.save()
             # pay_info.save() # ATHHHHHHHHHHHH
-            print("4")
             return redirect('payment-review', item_id)
     else:
         form = PaymentForm(instance=payment_object_old)
