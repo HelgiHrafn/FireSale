@@ -6,7 +6,7 @@
             <img class="profile-image" src="{{ Image.profile_image|default:'/static/images/silhouette-image-4.png' }}" onerror="this.onerror=null;this.src='/static/images/silhouette-image-4.png';" alt="your profile picture"/>
         <div class="profile-info">
             <h1 class="user-name">{{ Image.profile_name }}</h1>
-            <h3>Average rating: {{ user.profile.profile_rating }}</h3>
+            <h3>Average rating: {{ rating__avg }}</h3>
             <div class="bio-container">
                 <p class="user-bio">{{ Image.profile_bio }}</p>
             </div>
