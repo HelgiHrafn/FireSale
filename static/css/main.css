@@ -559,9 +559,7 @@ textarea{
     justify-content: center;
     margin-top: 2%;
     margin-inline: auto;
-    border-color: grey;
-    border-width: 1px;
-    border-style: solid;
+    background-color: #98D7D1;
     border-radius: 5px;
 }
 
@@ -572,9 +570,7 @@ textarea{
     display: flex;
     padding: 2.5%;
     margin-inline: auto;
-    border-color: grey;
-    border-width: 1px;
-    border-style: solid;
+    background-color: #EFEEEE;
     border-radius: 5px;
 }
 .item-offer-img{
@@ -585,9 +581,7 @@ textarea{
     border-radius: 5px;
 }
 .item-info-container{
-    border-color: grey;
-    border-width: 1px;
-    border-style: solid;
+    background-color: #EFEEEE;
     border-radius: 5px;
     padding: 2.5%;
     width: 95%;
