@@ -2,16 +2,17 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 from firesale.models import Item
+from django.core.validators import MinLengthValidator
 
 
 # Create your models here.
 class Payment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     payment_item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    card_number = models.IntegerField()
-    cvc = models.IntegerField()
-    exp_month = models.IntegerField()
-    exp_year = models.IntegerField()
+    card_number = models.IntegerField(max_length=16, validators=[MinLengthValidator(4)])
+    cvc = models.IntegerField(max_length=3, validators=[MinLengthValidator(3)])
+    exp_month = models.IntegerField(max_length=2, validators=[MinLengthValidator(2)])
+    exp_year = models.IntegerField(max_length=2, validators=[MinLengthValidator(2)])
     name = models.CharField(max_length=50)
 
 

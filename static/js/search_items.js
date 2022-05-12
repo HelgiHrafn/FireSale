@@ -21,7 +21,7 @@ $(document).ready(function() {
                                        <img class="item-sell-img" src="${d.firstImage}" alt="Image of item found via search query"/>
                                     </span>
                                     <span class="item-sell-name">${d.name}</span>
-                                    <span class="item-sell-price">${d.price}</span>
+                                    <span class="item-sell-price">${d.price} kr.</span>
                                     </button>
                                 </a>
                             </div>`
