@@ -421,6 +421,8 @@ textarea{
     font-size: 18px;
     padding-bottom: 5px;
     color: #325D79;
+    max-width: 181px;
+    max-height: 31px;
 }
 
 .button-sell-all-items {
