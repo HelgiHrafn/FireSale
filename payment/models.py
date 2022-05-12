@@ -25,7 +25,7 @@ class ContactInfo(models.Model):
     street_number = models.IntegerField()
     city = models.CharField(max_length=50)
     post_code = models.IntegerField()
-    country = CountryField(default="Iceland")
+    country = CountryField(countries_flag_url='//investmentbank.com/wp-content/uploads/2012/11/fire-sale-for-mergers-and-acquisitions-1-1-768x512.jpg')
 
 
 class OrderInfo(models.Model):
