@@ -3,7 +3,7 @@
     <h1 class="page_title">Prófíllinn minn</h1>
     <div class="profile-container">
         <div class="profile-image-and-bio">
-            <img class="profile-image" src="{{ Image.profile_image|default:'/static/images/silhouette-image-4.png' }}" alt="your profile picture"/>
+            <img class="profile-image" src="{{ Image.profile_image|default:'/static/images/silhouette-image-4.png' }}" onerror="this.onerror=null;this.src='/static/images/silhouette-image-4.png';" alt="your profile picture"/>
         <div class="profile-info">
             <h1 class="user-name">{{ Image.profile_name }}</h1>
             <h3>Average rating: {{ user.profile.profile_rating }}</h3>

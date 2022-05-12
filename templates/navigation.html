@@ -15,7 +15,7 @@
                 <li><a class = "navbar-button" href="{% url 'logout' %}">Skrá út</a></li>
                 <li>
                     <a id="profile-button" href="{% url 'profile' %}">
-                         <img class="navbar-profile-image" src="{{ user.profile.profile_image|default:'/static/images/silhouette-image-4.png'}}" alt="user's profile image">
+                         <img class="navbar-profile-image" src="{{ user.profile.profile_image|default:'/static/images/silhouette-image-4.png'}}" onerror="this.onerror=null;this.src='/static/images/silhouette-image-4.png';" alt="user's profile image">
 
                         <div class="navbar-profile-info">
                             <h2 class="navbar-profile-name">{{ user.profile.profile_name }}</h2>
