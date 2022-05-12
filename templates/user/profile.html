@@ -6,7 +6,7 @@
             <img class="profile-image" src="{{ Image.profile_image|default:"https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=" }}" alt="your profile picture"/>
         <div class="profile-info">
             <h1 class="user-name">{{ Image.profile_name }}</h1>
-
+            <h3>Average rating: {{ user.profile.profile_rating }}</h3>
             <div class="bio-container">
                 <p class="user-bio">{{ Image.profile_bio }}</p>
             </div>
@@ -22,7 +22,6 @@
             </div>
         {% endif %}
     </div>
-
 {% endblock %}
 
 
