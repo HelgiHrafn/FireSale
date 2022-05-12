@@ -315,6 +315,7 @@ textarea{
 .navbar-profile-name{
     margin: auto auto 5px 0;
     max-width: 180px;
+    max-height: 33px;
 }
 #navbar_post_sale_button {
     padding-left: 20px;
@@ -554,6 +555,7 @@ textarea{
     width: 95%;
     max-height: 25%;
     display: flex;
+    justify-content: center;
     margin-top: 2%;
     margin-inline: auto;
     border-color: grey;
@@ -576,7 +578,10 @@ textarea{
 }
 .item-offer-img{
     max-height: 90%;
-    margin: auto 2.5% auto;
+    object-fit: cover;
+    max-width: 30%;
+    margin: auto;
+    border-radius: 5px;
 }
 .item-info-container{
     border-color: grey;
