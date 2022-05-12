@@ -9,6 +9,10 @@
                 <div class="contact-rl">
                     <div class="contact-right">
                         <div class="contact-single">
+                            <h3 class="payment-title">Fornafn:</h3>
+                            {{ form.first_name }}
+                        </div>
+                        <div class="contact-single">
                             <h3 class="payment-title">Götuheiti:</h3>
                             {{ form.street_name }}
                         </div>
@@ -16,9 +20,9 @@
                             <h3 class="payment-title">Bæjarfélag:</h3>
                             {{ form.city }}
                         </div>
-                        <div class="contact-single">
-                            <h3 class="payment-title">Fornafn:</h3>
-                            {{ form.first_name }}
+                        <div class="contact-number-field-country">
+                            <h3 class="payment-title">Land:</h3>
+                            {{ form.country }}
                         </div>
                     </div>
                     <div class="contact-left">
@@ -36,10 +40,7 @@
                             <h3 class="payment-title">Póstnúmer:</h3>
                             {{ form.post_code }}
                         </div>
-                        <div class="contact-number-field-country">
-                            <h3 class="payment-title">Land:</h3>
-                            {{ form.country }}
-                        </div>
+
                     </div>
                 </div>
 
