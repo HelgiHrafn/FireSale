@@ -29,7 +29,7 @@
         <div class="similar-items-container">
             <h4 class="subtitle">Svipaðar vörur:</h4>
             {% for item in items %}
-                {% if item.item_category_id == 7 %}
+                {% if item.item_category == 7 %}
                     {% include 'firesale/single_item.html' with item=item  %}
                 {% endif %}
             {% endfor %}
