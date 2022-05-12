@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.forms import UserCreationForm
 from user.form.profile_form import ProfileForm
@@ -30,6 +31,7 @@ def register(request):
         })
 
 
+@login_required
 def profile(request):
     profile = Profile.objects.filter(user=request.user).first()
     if request.method == 'POST':
@@ -45,10 +47,12 @@ def profile(request):
     })
 
 
+@login_required
 def index(request):
     return render(request, 'user/profile.html', {'User': request.user, 'Image': Profile.objects.get(user=request.user.id)})
 
 
+@login_required
 def post_sale(request):
     if request.method == 'POST':
         form = ItemCreateForm(data=request.POST)
@@ -70,6 +74,7 @@ def post_sale(request):
     })
 
 
+@login_required
 def post_sale_images(request):
     form = ItemImageForm()
 

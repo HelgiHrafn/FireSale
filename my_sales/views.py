@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from firesale.models import Item
 from bid.models import Bid
@@ -7,11 +8,13 @@ from user.models import Profile
 
 
 # Create your views here.
+@login_required
 def index(request):
     context = {'items': Item.objects.filter(item_seller_id=request.user.id).order_by('item_name')}
     return render(request, 'my_sales/index.html', context)
 
 
+@login_required
 def get_item_by_id(request, id):
     highest_bid = get_item_highest_bid(id)
     return render(request, 'my_sales/sell_details.html', {
@@ -20,6 +23,7 @@ def get_item_by_id(request, id):
     })
 
 
+@login_required
 def get_item_highest_bid(id):
     bid = Bid.objects.filter(bid_item_id=id)
     if bid is None:
@@ -29,6 +33,7 @@ def get_item_highest_bid(id):
         return bid
 
 
+@login_required
 def accept_bid(request, id, bid):
     item = Item.objects.get(id=id)
     bid = Bid.objects.get(id=bid)
@@ -43,6 +48,7 @@ def accept_bid(request, id, bid):
     return render(request, 'my_sales/sell_confirm.html')
 
 
+@login_required
 def send_email_to_buyer(name, id):
     profile = Profile.objects.get(user_id=id)
     send_mail('FIRESALE: Tilboð samþykkt',
@@ -53,6 +59,7 @@ def send_email_to_buyer(name, id):
               )
 
 
+@login_required
 def send_email_to_failed_bids(name, item_id):
     failed_bids = Bid.objects.filter(bid_item_id=item_id).exclude(bid_status=True).distinct('user_id')
     # Send emails to all failed bids, only one email per user

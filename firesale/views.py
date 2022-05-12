@@ -1,9 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from firesale.models import Item
 from bid.forms.bid_form import BidCreateForm
 from bid.models import Bid
 from user.models import Profile
+
 
 # Create your views here.
 def index(request):
@@ -38,6 +40,7 @@ def get_item_highest_bid(id):
         return bid
 
 
+@login_required
 def bid_item_by_id(request, id):
     if request.method == 'POST':
         form = BidCreateForm(data=request.POST)
