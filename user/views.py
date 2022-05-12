@@ -15,11 +15,11 @@ def register(request):
         print(form.data)
         print(form.errors)
         if form.is_valid():
-                form.save()
-                user_id = User.objects.get(username=form.cleaned_data['username'])
-                profile =Profile(user_id=user_id.id)
-                profile.save()
-                return redirect('login')
+            form.save()
+            user_id = User.objects.get(username=form.cleaned_data['username'])
+            profile =Profile(user_id=user_id.id)
+            profile.save()
+            return redirect('login')
         else:
             return render(request, 'user/register.html', {
                 'form': UserCreationForm(),

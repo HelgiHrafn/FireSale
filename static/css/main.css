@@ -152,6 +152,7 @@ textarea{
     display: flex;
     justify-content: center;
     width: 325px;
+    margin-bottom: 10px;
 }
 
 .login-button{
@@ -238,7 +239,12 @@ textarea{
     border-radius: 50%;
     max-height: 200px;
 }
-
+#top_items_register{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 #post_sale_title{
     max-width: 53%;
 }
@@ -404,90 +410,6 @@ textarea{
     flex-direction: row;
     justify-content: space-around;
 }
-/* OLD POST SALE CODE
-.post_sale_description {
-    flex-basis: 20%;
-    justify-content: center;
-    border-width: 1px;
-    border-radius: 5px;
-    height: 200px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 35px;
-}
-
-.upload_img_button{
-    justify-content: center;
-    align-self: start;
-    margin-left: -1px;
-}
-
-.post_sale_img_box {
-    border-radius: 25px;
-    align-items: center;
-    height:250px;
-    justify-content: center;
-    width: 350px;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: 137px;
-    margin-bottom: 20px;
-    display: block;
-}
-.item_description {
-    margin-left: 110px;
-}
-#post_sale_image {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    height: 200px;
-    width: 200px;
-}
-
-.post_sale_top_right{
-    display: flex;
-    flex-direction: column;
-    height: 60%;
-    order: 1;
-    flex: 1;
-    justify-content:center;
-}
-
-.post_sale_bottom_right{
-
-    height: 20%;
-    order: 2;
-    flex: 1;
-    flex-basis: auto;
-    justify-content: space-evenly;
-
-}
-
-.post_sale_bottom_buttons{
-    display: flex;
-    height: 20%;
-    margin-left: -4px;
-    flex-direction: row;
-    justify-content: start;
-}
-
-#post_sale_price{
-    max-width: 53%;
-}
-#post_sale_textarea{
-    margin-left:4px;
-}
-
-
-.post_sale_btm_btns{
-    height: 35px;
-    margin-top: 5px;
-    margin-right: 5px;
-}
-/*
 /* ALL ITEMS CSS FROM DB BEGIN HERE */
 .item-sell-name, .item-sell-price {
     float: left;
