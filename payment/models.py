@@ -8,7 +8,7 @@ from firesale.models import Item
 class Payment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     payment_item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    card_number = models.IntegerField()
+    card_number = models.BigIntegerField()
     cvc = models.IntegerField()
     exp_month = models.IntegerField()
     exp_year = models.IntegerField()
