@@ -74,7 +74,6 @@ def post_sale(request):
     })
 
 
-@login_required
 def post_sale_images(request):
     form = ItemImageForm()
 
