@@ -605,7 +605,7 @@ textarea{
 .item-info-left{
     flex-direction: column;
     display: flex;
-    flex: 1;
+    flex: 4;
 
 }
 .item-info{
