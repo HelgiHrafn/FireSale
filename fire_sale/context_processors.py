@@ -7,13 +7,18 @@ from user.models import Profile
 
 def user_rating(request):
     user_id = request.user.id
+    print(user_id)
     print("hello")
     try:
-        orders = OrderInfo.objects.filter(seller_id=user_id)
+        print("helllll")
+        orders = OrderInfo.objects.filter(seller_id=user_id).aggregate(Avg('rating'))
+        rating = list(orders.values())[0]
+        rating = int(rating)
+        print(rating)
+
+        return {'rating__avg': rating}
     except:
-        orders =None
+        return {'rating__avg': 0}
 
 
 
-    profile_imgaa = Profile.objects.all()[:1].get()
-    return {'profile_imageaa': profile_imgaa}
