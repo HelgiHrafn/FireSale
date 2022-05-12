@@ -2,7 +2,7 @@
     <a href ="/my_sales/{{ item.id }}">
         <div class="single-my_sales-item">
         <div class="image-container">
-            <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}" />
+            <img class="item-sell-img" alt="mynd af söluvöru" src="{{ item.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}"  onerror="this.onerror=null;this.src='/static/images/bonfire-default-img.jpg';"/>
         </div>
         <span class="item-sell-name">{{ item.item_name }}</span>
         <span class="item-sell-price">{{ item.item_price }}</span>
