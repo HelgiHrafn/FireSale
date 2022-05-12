@@ -6,15 +6,14 @@ from firesale.models import Item
 from bid.models import Bid
 from payment.models import ContactInfo, Payment, OrderInfo
 from payment.forms.Order_info_form import OrderForm
+from django.core.exceptions import ObjectDoesNotExist
 
 
 # Create your views here.
-@login_required
 def index(request):
     return render(request, 'payment/payment.html')
 
 
-@login_required
 def payment(request, item_id):
     item = Item.objects.get(id=item_id)
     payment_object_old = Payment.objects.filter(payment_item_id=item_id).first()
@@ -43,36 +42,33 @@ def payment(request, item_id):
     })
 
 
-@login_required
 def contact_info(request, bid_id):
     bid = Bid.objects.get(id=bid_id)
     item_id = bid.bid_item_id
-    contact = ContactInfo.objects.filter(payment_item_id=item_id).first()
+    contact_object_old = ContactInfo.objects.filter(payment_item_id=item_id).first()
     if request.method == 'POST':
         form = ContactInfoForm(data=request.POST)
         if form.is_valid():
-            old_id = contact.id
-            contact = form.save(commit=False)
+            contact_object = form.save(commit=False)
             user_id = request.user.id
-            contact.user_id = user_id
-            bid = Bid.objects.get(id=bid_id)
-            item_id = bid.bid_item_id
-            contact.payment_item_id = item_id
-            contact.id = old_id
-            contact.save()
-            # info.save() # ATHHHHHHHHHHHHHHHHHHhh
+            contact_object.user_id = user_id
+            contact_object.payment_item_id = item_id
+            if not contact_object_old:
+                contact_object.save()
+            else:
+                contact_object.id = contact_object_old.id
+                contact_object.save()
             return redirect('payment-payment', item_id)
     else:
-        form = ContactInfoForm(instance=contact)
+        form = ContactInfoForm(instance=contact_object_old)
         bid = Bid.objects.get(id=bid_id)
-    return render(request, 'payment/contact_info.html',  {
+    return render(request, 'payment/contact_info.html', {
         'form': form,
         'bid': bid,
 
     })
 
 
-@login_required
 def review(request, item_id):
     contact_review = ContactInfo.objects.get(payment_item_id=item_id)
     payment_review = Payment.objects.get(payment_item_id=item_id)
@@ -87,7 +83,6 @@ def review(request, item_id):
     })
 
 
-@login_required
 def payment_processed(request, item_id):
     item = Item.objects.get(id=item_id)
     bid = Bid.objects.get(bid_item_id=item.id, bid_status=True)
