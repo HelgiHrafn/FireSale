@@ -1,5 +1,7 @@
 {%  extends 'base.html' %}
 {% block content %}
 <h2 class="page_title">Greiðsla fór í gegn og varan er á leiðinni!</h2>
-       <a class="confirm_button" href="{% url 'firesale-index' %}">Aftur á forsíðu</a>
+    {{ form }}
+    <a class="confirm_button" href="{% url 'firesale-index' %}">Aftur á forsíðu</a>
+
 {% endblock %}

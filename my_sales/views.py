@@ -16,6 +16,7 @@ def index(request):
 
 @login_required
 def get_item_by_id(request, id):
+    print(id)
     highest_bid = get_item_highest_bid(id)
     return render(request, 'my_sales/sell_details.html', {
         'item': get_object_or_404(Item, pk=id),
@@ -23,9 +24,10 @@ def get_item_by_id(request, id):
     })
 
 
-@login_required
 def get_item_highest_bid(id):
     bid = Bid.objects.filter(bid_item_id=id)
+    print("bids")
+    print("bid")
     if bid is None:
         return bid
     else:
@@ -33,12 +35,11 @@ def get_item_highest_bid(id):
         return bid
 
 
-@login_required
+
 def accept_bid(request, id, bid):
     item = Item.objects.get(id=id)
     bid = Bid.objects.get(id=bid)
     if not bid.bid_status:
-        print("hello")
         bid.bid_status = True
         print(bid.bid_status)
         bid.save()
@@ -48,7 +49,6 @@ def accept_bid(request, id, bid):
     return render(request, 'my_sales/sell_confirm.html')
 
 
-@login_required
 def send_email_to_buyer(name, id):
     profile = Profile.objects.get(user_id=id)
     send_mail('FIRESALE: Tilboð samþykkt',
@@ -59,7 +59,6 @@ def send_email_to_buyer(name, id):
               )
 
 
-@login_required
 def send_email_to_failed_bids(name, item_id):
     failed_bids = Bid.objects.filter(bid_item_id=item_id).exclude(bid_status=True).distinct('user_id')
     # Send emails to all failed bids, only one email per user

@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 from firesale.models import Item
@@ -24,3 +25,10 @@ class ContactInfo(models.Model):
     city = models.CharField(max_length=50)
     post_code = models.IntegerField()
     #country = models.ForeignKey(Countries, on_delete=models.CASCADE)
+
+
+class OrderInfo(models.Model):
+    buyer = models.ForeignKey(User, related_name='buyer_item', on_delete=models.RESTRICT)
+    seller = models.ForeignKey(User, related_name='seller_item',  on_delete=models.RESTRICT)
+    item = models.ForeignKey(Item, on_delete=models.RESTRICT)
+    rating = models.PositiveIntegerField(default=5, validators=[MinValueValidator(1), MaxValueValidator(5)])

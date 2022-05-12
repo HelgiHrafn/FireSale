@@ -4,8 +4,8 @@ from payment.forms.payment_form import PaymentForm
 from payment.forms.contact_info_form import ContactInfoForm
 from firesale.models import Item
 from bid.models import Bid
-from payment.models import ContactInfo
-from payment.models import Payment
+from payment.models import ContactInfo, Payment, OrderInfo
+from payment.forms.Order_info_form import OrderForm
 
 
 # Create your views here.
@@ -93,5 +93,12 @@ def payment_processed(request, item_id):
     bid = Bid.objects.get(bid_item_id=item.id, bid_status=True)
     bid.bid_paid = True
     bid.save()
-
-    return render(request, 'payment/payment_processed.html')
+    if request.method == 'POST':
+        #do sometthing
+        print("yoyo")
+    else:
+        order = OrderInfo(seller_id=item.item_seller, buyer_id=bid.user_id, item=item.id)
+        order.save()
+    return render(request, 'payment/payment_processed.html', {
+        'form': OrderForm()
+    })
