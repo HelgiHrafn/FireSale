@@ -1,5 +1,6 @@
 from django.forms import ModelForm, widgets
 from payment.models import ContactInfo
+from django_countries.widgets import CountrySelectWidget
 
 
 class ContactInfoForm(ModelForm):
@@ -13,8 +14,8 @@ class ContactInfoForm(ModelForm):
             'street_number': widgets.NumberInput(attrs={'class': 'form-control'}),
             'city': widgets.TextInput(attrs={'class': 'form-control'}),
             'post_code': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'country': widgets.Select(attrs={'class': 'form-control'})
-        }
+            'country': CountrySelectWidget(),
+          }
         labels = {
             'first_name': 'Fornafn',
             'last_name': 'Eftirnafn',
