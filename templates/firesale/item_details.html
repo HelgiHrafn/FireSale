@@ -28,11 +28,14 @@
         </div>
         <div class="similar-items-container">
             <h4 class="subtitle">Svipaðar vörur:</h4>
-            {% for item in items %}
-                {% if item.item_category == 7 %}
-                    {% include 'firesale/single_item.html' with item=item  %}
-                {% endif %}
-            {% endfor %}
+            {{ item.item_category }}
+            {{ item.item_category_id }}
+            {{ items }}
+            <div class = similar-suggestions>
+                {% for i in items %}
+                    <p>hello</p>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -3,7 +3,7 @@
         <div class="image-container">
            {% for i in items %}
             {% if i.id == bid.bid_item_id %}
-                <img class="item-sell-img" alt="mynd af söluvöru" src="{{ i.itemimage_set.first.image|default:"https://media.istockphoto.com/vectors/fire-flame-icon-isolated-bonfire-sign-emoticon-flame-symbol-isolated-vector-id1137962021?k=20&m=1137962021&s=612x612&w=0&h=Ub026rl_amXtLNPbMMJRQHDcJ93G_v5d23C55OUtqXk=" }}" />
+                <img class="item-sell-img" alt="mynd af söluvöru" src="{{ i.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}" />
         </div>
         <span class="item-sell-name">Nafn: {{ i.item_name }}</span>
 
