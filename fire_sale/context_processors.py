@@ -13,7 +13,6 @@ def user_rating(request):
     except:
         orders =None
     if orders:
-        stars_average = orders.rating.aggregate()
         print("do we get here")
 
     profile_imgaa = Profile.objects.all()[:1].get()
