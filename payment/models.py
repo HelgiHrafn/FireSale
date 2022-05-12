@@ -30,5 +30,5 @@ class ContactInfo(models.Model):
 class OrderInfo(models.Model):
     buyer = models.ForeignKey(User, related_name='buyer_item', on_delete=models.RESTRICT)
     seller = models.ForeignKey(User, related_name='seller_item',  on_delete=models.RESTRICT)
-    item = models.ForeignKey(Item, on_delete=models.RESTRICT)
+    item = models.OneToOneField(Item, on_delete=models.RESTRICT)
     rating = models.PositiveIntegerField(default=5, validators=[MinValueValidator(1), MaxValueValidator(5)])
