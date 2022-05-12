@@ -35,7 +35,6 @@ def get_item_highest_bid(id):
         return bid
 
 
-
 def accept_bid(request, id, bid):
     item = Item.objects.get(id=id)
     bid = Bid.objects.get(id=bid)

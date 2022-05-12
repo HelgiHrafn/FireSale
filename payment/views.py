@@ -89,11 +89,17 @@ def payment_processed(request, item_id):
     bid.bid_paid = True
     bid.save()
     if request.method == 'POST':
-        #do sometthing
-        print("yoyo")
+        form = OrderForm(data=request.POST)
+        if form.is_valid():
+            order_object = form.save(commit=False)
+            order_object_old = OrderInfo.objects.filter(item_id=item_id).first()
+            order_object_old.rating = order_object.rating
+            order_object_old.save()
+            return redirect('firesale-index')
     else:
-        order = OrderInfo(seller_id=item.item_seller, buyer_id=bid.user_id, item=item.id)
+        order = OrderInfo(seller_id=item.item_seller.id, buyer_id=bid.user_id, item_id=item.id)
         order.save()
     return render(request, 'payment/payment_processed.html', {
-        'form': OrderForm()
+        'form': OrderForm(),
+        'item_id': item
     })
