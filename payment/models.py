@@ -9,10 +9,10 @@ from firesale.models import Item
 class Payment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     payment_item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    card_number = models.PositiveIntegerField(validators=[MinValueValidator(1111111111111111), MaxValueValidator(9999999999999999)])
-    cvc = models.PositiveIntegerField(validators=[MinValueValidator(111), MaxValueValidator(999)])
-    exp_month = models.PositiveIntegerField(validators=[MaxValueValidator(12)])
-    exp_year = models.PositiveIntegerField(validators=[MaxValueValidator(99)])
+    card_number = models.IntegerField()
+    cvc = models.IntegerField()
+    exp_month = models.IntegerField()
+    exp_year = models.IntegerField()
     name = models.CharField(max_length=50)
 
 
