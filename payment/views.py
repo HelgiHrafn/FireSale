@@ -17,6 +17,7 @@ def index(request):
 def payment(request, item_id):
     item = Item.objects.get(id=item_id)
     payment_object_old = Payment.objects.filter(payment_item_id=item_id).first()
+    bid = Bid.objects.filter(bid_item_id=item.id).get(bid_status=True)
     if request.method == 'POST':
         form = PaymentForm(data=request.POST)
         if form.is_valid():
@@ -34,7 +35,7 @@ def payment(request, item_id):
     else:
         form = PaymentForm(instance=payment_object_old)
         item = Item.objects.get(id=item_id)
-        bid = Bid.objects.filter(bid_item_id=item.id).get(bid_status=True)
+
     return render(request, 'payment/payment.html', {
         'form': form,
         'item': item,

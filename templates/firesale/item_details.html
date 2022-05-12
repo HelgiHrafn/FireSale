@@ -4,7 +4,7 @@
     <div class="offer-container">
         <div class="offer-img-container">
              {% for item_image in item.itemimage_set.all %}
-                <img src="{{ item_image.image }}" alt="Item image" class="item-offer-img">
+                <img src="{{ item_image.image }}" alt="Item image" onerror="this.onerror=null;this.src='/static/images/bonfire-default-img.jpg';" class="item-offer-img">
             {% endfor %}
         </div>
         <div class="item-info-container">
@@ -33,7 +33,7 @@
             {{ items }}
             <div class = similar-suggestions>
                 {% for i in items %}
-                    <p>hello</p>
+                  <p>hello</p>
                 {% endfor %}
             </div>
         </div>

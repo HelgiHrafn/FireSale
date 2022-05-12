@@ -3,7 +3,7 @@
         <div class="image-container">
            {% for i in items %}
             {% if i.id == bid.bid_item_id %}
-                <img class="item-sell-img" alt="mynd af söluvöru" src="{{ i.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}" />
+                <img class="item-sell-img" alt="mynd af söluvöru" src="{{ i.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}" onerror="this.onerror=null;this.src='/static/images/bonfire-default-img.jpg';" />
         </div>
         <span class="item-sell-name">Nafn: {{ i.item_name }}</span>
 

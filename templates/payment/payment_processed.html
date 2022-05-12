@@ -2,10 +2,13 @@
 <a href ="/payment/payment_processed/{{ item.id }}">
 {% block content %}
 <h2 class="page_title">Greiðsla fór í gegn og varan er á leiðinni!</h2>
-    <form action="{% url 'payment-processed' item_id.id  %}" method="post" class="form-horizontal">
-    {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="confirm_button" value="Gefa stjörnur og fara aftur á forsíðu"/>
+    <div class="img-upload-container">
+        <form action="{% url 'payment-processed' item_id.id  %}" method="post" class="form-horizontal">
+        {% csrf_token %}
+            {{ form }}
+            <input type="submit" class="confirm_button" value="Gefa stjörnur og fara aftur á forsíðu"/>
         </form>
+    </div>
+
 {% endblock %}
 </a>
