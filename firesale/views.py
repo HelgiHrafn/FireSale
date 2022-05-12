@@ -25,12 +25,20 @@ def index(request):
 def get_item_by_id(request, id):
     # Get highest bid for item
     highest_bid = get_item_highest_bid(id)
-    items = Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')
+    items = get_category_items((id))
+    print(items)
+    #items2 = Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')
     return render(request, 'firesale/item_details.html', {
         'item': get_object_or_404(Item, pk=id),
         'bid': highest_bid,
         'items': items
     })
+
+def get_category_items(id):
+    item = Item.objects.get(id=id)
+    category = item.item_category
+    items_same_category = Item.objects.filter(item_category=category).exclude(bid__bid_status=True).exclude(id=id)
+    return items_same_category
 
 
 def get_item_highest_bid(id):

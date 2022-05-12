@@ -2,6 +2,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 from firesale.models import Item
+from django_countries.fields import CountryField
 
 
 # Create your models here.
@@ -24,7 +25,7 @@ class ContactInfo(models.Model):
     street_number = models.IntegerField()
     city = models.CharField(max_length=50)
     post_code = models.IntegerField()
-    #country = models.ForeignKey(Countries, on_delete=models.CASCADE)
+    country = CountryField(default="Iceland")
 
 
 class OrderInfo(models.Model):
