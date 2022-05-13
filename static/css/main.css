@@ -36,7 +36,6 @@ textarea{
     padding: 10px;
 }
 .is_accepted{
-    width: 45%;
     background-color: mediumseagreen;
     border-radius: 5px;
     color: white;
@@ -45,7 +44,6 @@ textarea{
     padding-right: 10px;
 }
 .is_not_accepted{
-    width: 45%;
     background-color: firebrick;
     border-radius: 5px;
     color: white;
@@ -201,10 +199,6 @@ textarea{
     filter: drop-shadow(-2px 3px 1px rgba(0, 0, 0, 0.25));
 }
 
-#back_to_frontpage_button{
-    width: 35%;
-    height: 12%;
-}
 .container{
     min-height: 1000px;
 }
@@ -552,7 +546,6 @@ textarea{
 .offer-container{
     background-color: white;
     border-radius: 5px;
-    height: 1000px;
     margin: 0 15% 0 15%;
     display: flex;
     flex-direction: column;
@@ -617,15 +610,15 @@ textarea{
 
 .item-info-right{
     display: flex;
-    flex: 1;
     align-items: flex-end;
     justify-content: flex-end;
+    width: 30%;
 }
 
 .item-info-left{
     flex-direction: column;
     display: flex;
-    flex: 4;
+    width: 70%;
 
 }
 .item-info{
@@ -785,7 +778,6 @@ textarea{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 45px;
 }
 #id_country{
     max-width: 100%;

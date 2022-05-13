@@ -10,7 +10,7 @@ def user_rating(request):
     try:
         orders = OrderInfo.objects.filter(seller_id=user_id).aggregate(Avg('rating'))
         rating = list(orders.values())[0]
-        rating = int(rating)
+        rating = round(rating, 1)
         return {'rating__avg': rating}
     except:
         return {'rating__avg': 0}
