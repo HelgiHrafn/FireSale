@@ -19,7 +19,9 @@
                 {% if user.is_authenticated and  bid.bid_amount > 0 and bid.bid_status == False %}
                 <a class="confirm_button" href="{% url 'sell-confirm' item.id bid.id %}">Samþykkja tilboð</a>
                 <div class="offer-input-container">
-                    {% elif bid.bid_status == True %}
+                {% elif bid.bid_paid == True and bid.bid_status == True %}
+                        <div class="is_accepted">Greitt hefur verið fyrir vöru</div>
+                {% elif bid.bid_status == True %}
                         <div class="is_accepted">Tilboð samþykkt og tilkynning sent á kaupanda</div>
                     {% else %}
                         <div class="is_not_accepted">Engin tilboð hafa borist</div>
