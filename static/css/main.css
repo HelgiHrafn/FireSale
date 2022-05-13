@@ -450,6 +450,7 @@ textarea{
     color: #325D79;
     max-width: 181px;
     max-height: 31px;
+    white-space: nowrap;
 }
 
 .button-sell-all-items {
