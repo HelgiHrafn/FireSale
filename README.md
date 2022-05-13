@@ -13,8 +13,11 @@ Linkur á Github repo: https://github.com/HelgiHrafn/FireSale
 Allt sem notandi þarf til að keyra forritið er til staðar í requirements.txt
 
 Við notuðum e-mail fyrir tilkynningar og til þess að það virki þarf að framkvæma eftirfarandi skref:
-    tester/kennari að setja sitt RU-email inn í skjalið:
-	/fire_sale/settings.py
+
+Tester/kennari verður að setja sitt RU-email inn í skjalið:
+/fire_sale/settings.py
+
+        
 
 	Í línu 150 þarf að setja gilt RU-Mail.
 	Í línu 151 þarf að setja password fyrir mailið.
