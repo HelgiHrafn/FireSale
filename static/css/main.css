@@ -586,7 +586,16 @@ textarea{
     background-color: #EFEEEE;
     border-radius: 5px;
 }
+
+.similar-suggestions{
+    display:flex;
+    flex-direction: row;
+}
+
+
 .item-offer-img{
+    flex-direction: row;
+    flex-wrap: wrap;
     max-height: 90%;
     object-fit: cover;
     max-width: 30%;
