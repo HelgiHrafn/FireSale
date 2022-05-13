@@ -10,9 +10,9 @@ class Payment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     payment_item = models.ForeignKey(Item, on_delete=models.CASCADE)
     card_number = models.BigIntegerField()
-    cvc = models.IntegerField()
-    exp_month = models.IntegerField()
-    exp_year = models.IntegerField()
+    cvc = models.PositiveIntegerField()
+    exp_month = models.PositiveIntegerField()
+    exp_year = models.PositiveIntegerField()
     name = models.CharField(max_length=50)
 
 
@@ -22,7 +22,7 @@ class ContactInfo(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     street_name = models.CharField(max_length=50)
-    street_number = models.IntegerField()
+    street_number = models.PositiveIntegerField()
     city = models.CharField(max_length=50)
     post_code = models.IntegerField()
     country = CountryField(countries_flag_url='//investmentbank.com/wp-content/uploads/2012/11/fire-sale-for-mergers-and-acquisitions-1-1-768x512.jpg')
