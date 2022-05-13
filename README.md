@@ -39,7 +39,7 @@ Ef að tester/kennari vill nota tilbúna notendur á síðunni má hann nota eft
 
 Guðmundur Kristján Guðnason - gudmundurkg20@ru.is
 
-Helgi Hrafn Axelsson - 
+Helgi Hrafn Axelsson - helgia21@ru.is
 
 Kristján Þór Matthíasson - kristjanm20@ru.is
 
