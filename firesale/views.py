@@ -8,7 +8,8 @@ from user.models import Profile
 
 
 # Create your views here.
-def index(request):
+def index(request, opt=None):
+    print(opt)
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
         items = [ {
@@ -18,7 +19,19 @@ def index(request):
             'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(item_name__icontains=search_filter)]
         return JsonResponse({'data': items})
-    context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')}
+    if opt == 'cheap':
+        print(opt)
+        context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('item_price')}
+    elif opt == 'exp':
+        context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-item_price')}
+    elif opt == 'alp':
+        context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')}
+    elif opt == 'rev':
+        context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-item_name')}
+    else:
+        print("standard")
+        context = {'items': Item.objects.exclude(bid__bid_status=True).all()}
+
     return render(request, 'firesale/index.html', context)
 
 

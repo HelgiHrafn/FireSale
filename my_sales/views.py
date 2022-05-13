@@ -40,7 +40,6 @@ def accept_bid(request, id, bid):
     bid = Bid.objects.get(id=bid)
     if not bid.bid_status:
         bid.bid_status = True
-        print(bid.bid_status)
         bid.save()
         send_email_to_buyer(item.item_name, bid.user_id)
         send_email_to_failed_bids(item.item_name, bid.bid_item_id)
