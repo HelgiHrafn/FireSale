@@ -5,6 +5,7 @@ from bid.models import Bid
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from user.models import Profile
+from django.conf import settings
 
 
 # Create your views here.
@@ -50,9 +51,10 @@ def accept_bid(request, id, bid):
 
 def send_email_to_buyer(name, id):
     profile = Profile.objects.get(user_id=id)
+    sender = settings.EMAIL_HOST_USER
     send_mail('FIRESALE: Tilboð samþykkt',
               'Tilboð í vöru ' + name + ' hefur verið samþykkt. Skráðu þig inn til að ganga frá greiðslu.',
-              'kristjanm20@ru.is',
+              sender,
               [profile.profile_email],
               fail_silently=True,
               )
@@ -61,11 +63,12 @@ def send_email_to_buyer(name, id):
 def send_email_to_failed_bids(name, item_id):
     failed_bids = Bid.objects.filter(bid_item_id=item_id).exclude(bid_status=True).distinct('user_id')
     # Send emails to all failed bids, only one email per user
+    sender = settings.EMAIL_HOST_USER
     for bid in failed_bids:
         profile = Profile.objects.get(user_id=bid.user_id)
         send_mail('FIRESALE: Tilboði/tilboðum hafnað',
                   'Tilboði/tilboðum í vöru' + name + ' hefur/hafa verið hafnað.',
-                  'kristjanm20@ru.is',
+                  sender,
                   [profile.profile_email],
                   fail_silently=True,
                   )
