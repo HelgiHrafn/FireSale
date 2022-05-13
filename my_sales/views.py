@@ -44,7 +44,8 @@ def accept_bid(request, id, bid):
         bid.save()
         send_email_to_buyer(item.item_name, bid.user_id)
         send_email_to_failed_bids(item.item_name, bid.bid_item_id)
-
+    # Delete all failed bids in the end
+    Bid.objects.filter(bid_item_id=id).exclude(bid_status=True).delete()
     return render(request, 'my_sales/sell_confirm.html')
 
 
@@ -69,4 +70,4 @@ def send_email_to_failed_bids(name, item_id):
                   [profile.profile_email],
                   fail_silently=True,
                   )
-    # Do we want to delete these bids from the database ?
+
