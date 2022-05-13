@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'firesale.apps.FiresaleConfig',
     'my_offers.apps.MyOffersConfig',
     'my_sales.apps.MySalesConfig',
@@ -147,7 +148,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.office365.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'firesaleadmin@protonmail.com'
-EMAIL_HOST_PASSWORD = '4j6!-k5M2Pn2EuH'
-EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'gudmundurkg20@ru.is'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_SSL = False
 EMAIL_USE_TLS = True
