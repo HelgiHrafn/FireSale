@@ -22,6 +22,11 @@ textarea{
     font-size: 16px;
     resize: none;
 }
+@media screen and (max-width: 1080px){
+    .navbar-right{
+        display: none;
+    }
+}
 /* Login page */
 #loginLabel {
 
