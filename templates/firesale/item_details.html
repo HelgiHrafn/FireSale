@@ -31,14 +31,14 @@
             <div class = similar-suggestions>
                 {% for i in items %}
                     <div class="each item">
-                        <a href ="/firesale/{{ i.id }}">
-                        <button class="button-single-item">
-                            <span class="image-container">
-                                <img class="item-sell-img" alt="mynd af söluvöru" onerror="this.onerror=null;this.src='/static/images/bonfire-default-img.jpg';" src="{{ i.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}"/>
-                            </span>
-                            <span class="item-sell-name">{{ i.item_name }}</span>
-                            <span class="item-sell-price">{{ i.item_price }} kr.</span>
-                        </button>
+                        <a href="/firesale/item/{{ i.id }}">
+                            <button class="button-single-item">
+                                <span class="image-container">
+                                    <img class="item-sell-img" alt="mynd af söluvöru" onerror="this.onerror=null;this.src='/static/images/bonfire-default-img.jpg';" src="{{ i.itemimage_set.first.image|default:"/static/images/bonfire-default-img.jpg" }}"/>
+                                </span>
+                                <span class="item-sell-name">{{ i.item_name }}</span>
+                                <span class="item-sell-price">{{ i.item_price }} kr.</span>
+                            </button>
                         </a>
                     </div>
                 {% endfor %}
