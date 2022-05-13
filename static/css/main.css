@@ -207,10 +207,38 @@ textarea{
 .container{
     min-height: 1000px;
 }
-.order_by_btn:first-child{
+
+.order-by-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.order-by-btn:first-child {
     margin-left: 65px;
 }
-.order_by_btn{
+
+.order-by-btn:active{
+    background-color: white;
+    color: #325D79;
+    text-decoration: none;!important;
+}
+
+.order-by-btn:hover{
+    background-color: white;
+    color: #325D79;
+    text-decoration: none!important;
+}
+
+.order-by-btn{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    text-decoration: none;!important;
+}
+
+.order_by_option{
+    display: flex;
+    flex-direction: row;
     background-color: #325D79;
     color: white;
     border-radius: 5px;
