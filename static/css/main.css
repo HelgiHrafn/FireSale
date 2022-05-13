@@ -576,6 +576,7 @@ textarea{
     display: flex;
     padding: 2.5%;
     margin-inline: auto;
+    margin-bottom: 20px;
     background-color: #EFEEEE;
     border-radius: 5px;
 }
