@@ -212,13 +212,7 @@ textarea{
     margin-left: 65px;
 }
 
-.order-by-btn:active{
-    background-color: white;
-    color: #325D79;
-    text-decoration: none;!important;
-}
-
-.order-by-btn:hover{
+.order-by-btn:hover, .order-by-btn:active, .order-by-btn:focus{
     background-color: white;
     color: #325D79;
     text-decoration: none!important;
