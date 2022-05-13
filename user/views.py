@@ -12,8 +12,6 @@ from django.contrib.auth.models import User
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
-        print(form.data)
-        print(form.errors)
         if form.is_valid():
             form.save()
             user_id = User.objects.get(username=form.cleaned_data['username'])
@@ -86,7 +84,6 @@ def post_sale_images(request):
             form = ItemImage(image=image, item_id=item.id)
             form.save()
             counter = ItemImage.objects.filter(item_id=item.id).count()
-            print(counter)
             if counter > 2:
                 return render(request, 'user/post_sale_images.html', {
                     'message': 'Hámark fjölda mynda náð'

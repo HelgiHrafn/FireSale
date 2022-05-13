@@ -17,7 +17,6 @@ def index(request):
 
 @login_required
 def get_item_by_id(request, id):
-    print(id)
     highest_bid = get_item_highest_bid(id)
     return render(request, 'my_sales/sell_details.html', {
         'item': get_object_or_404(Item, pk=id),
@@ -27,8 +26,6 @@ def get_item_by_id(request, id):
 
 def get_item_highest_bid(id):
     bid = Bid.objects.filter(bid_item_id=id)
-    print("bids")
-    print("bid")
     if bid is None:
         return bid
     else:

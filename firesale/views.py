@@ -12,7 +12,7 @@ def index(request, opt=None):
     print(opt)
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        items = [ {
+        items = [{
             'id': x.id,
             'name': x.item_name,
             'price': x.item_price,
@@ -20,7 +20,6 @@ def index(request, opt=None):
         } for x in Item.objects.filter(item_name__icontains=search_filter)]
         return JsonResponse({'data': items})
     if opt == 'cheap':
-        print(opt)
         context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('item_price')}
     elif opt == 'exp':
         context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-item_price')}
@@ -29,7 +28,6 @@ def index(request, opt=None):
     elif opt == 'rev':
         context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-item_name')}
     else:
-        print("standard")
         context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-id')}
 
     return render(request, 'firesale/index.html', context)
@@ -39,7 +37,6 @@ def get_item_by_id(request, id):
     # Get highest bid for item
     highest_bid = get_item_highest_bid(id)
     items = get_category_items(id).order_by('?')[:5]
-    print(items)
     #items2 = Item.objects.exclude(bid__bid_status=True).all().order_by('item_name')
     return render(request, 'firesale/item_details.html', {
         'item': get_object_or_404(Item, pk=id),
@@ -47,6 +44,7 @@ def get_item_by_id(request, id):
         'items': items,
 
     })
+
 
 def get_category_items(id):
     item = Item.objects.get(id=id)
@@ -68,7 +66,6 @@ def get_item_highest_bid(id):
 def bid_item_by_id(request, id):
     if request.method == 'POST':
         form = BidCreateForm(data=request.POST)
-        print(form.data)
         if form.is_valid():
             amount = form.cleaned_data.get("bid_amount")
             user = request.user.id
