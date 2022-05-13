@@ -30,7 +30,7 @@ def index(request, opt=None):
         context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-item_name')}
     else:
         print("standard")
-        context = {'items': Item.objects.exclude(bid__bid_status=True).all()}
+        context = {'items': Item.objects.exclude(bid__bid_status=True).all().order_by('-id')}
 
     return render(request, 'firesale/index.html', context)
 
