@@ -4,7 +4,7 @@
 
 # FireSale
 
-# Uppsetning
+# Uppsetning - Push Notifications
 
 Allt sem notandi þarf til að keyra forritið er til staðar í requirements.txt
 
@@ -16,7 +16,15 @@ Við notuðum e-mail fyrir tilkynningar og til þess að það virki þarf að f
 	Í línu 151 þarf að setja password fyrir mailið.
 
 Ef þetta er ekki gert þá keyrir forritið bilunarlaust en engin notification eru send.
-	
+
+# Tilbúnir notendur
+
+Ef að tester/kennari vill nota tilbúna notendur á síðunni má hann nota eftirfarandi notendur:
+
+    User: stjani  Password: egersvowoke
+    User: helgi   Password: egersvowoke
+    User: gummi   Password: egersvowoke
+    User: jonjonsson Password: egersvowoke
 
 # Teymið
 
