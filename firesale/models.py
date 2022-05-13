@@ -21,7 +21,7 @@ class ItemCategory(models.Model):
 
 class Item(models.Model):
     item_name = models.CharField(max_length=20)
-    item_price = models.PositiveIntegerField(max_length=16)
+    item_price = models.PositiveIntegerField()
     item_category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
     item_condition = models.ForeignKey(Condition, on_delete=models.CASCADE)
     item_description = models.CharField(max_length=50, blank=True)
